@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+    <meta name="author" content="Coderthemes">
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <title>SimpleAdmin - Responsive Admin Dashboard Template</title>
+
+	<!-- Google-Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,600,700,900,400italic' rel='stylesheet'>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/prettify.css" />
+
+	<!-- Custom CSS -->
+	<link href="css/styles.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">SimpleAdmin Documentation 1.1</a>
+			</div>
+
+			<!--div><a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a></div-->
+		</div><!-- /.container-fluid -->
+	</nav>
+
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li>
+					<a href="#intro">Introduction</a>
+				</li>
+				<li>
+					<a href="#structure">Structure</a>
+				</li>
+				<li>
+					<a href="#utilities">Utilities</a>
+				</li>
+				<li>
+					<a href="#credits">Plugins &amp; Resources (Credits)</a>
+				</li>
+				<li>
+					<a href="#support">Support</a>
+				</li>
+				<li><a href="#changelog">Change Log</a></li>
+			</ul>
+		</div>
+		<!-- /#sidebar-wrapper -->
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="right-bar">
+
+							<div  class="com-container">
+
+								<div id="intro" class="com-container">
+									<h3 class="page-header">Thank you very much for your purchase!</h3>
+									<div class="p-t-20">
+											<div class="alert alert-info alert-dismissable">
+												<p>If you have any questions that are beyond the scope of this documentation, please feel free to email or contact us via my page.</p>
+											</div>
+									</div>
+								</div>
+
+								<h4 class="page-header">Introduction</h4>
+
+								<p>SimpleAdmin is a bootstrap based premium admin template. It has super clean user interface, customizable components and widgets and three different color schemes. It is fully responsive and easy to customize. The code is super easy to understand and gives power to any developer to turn this theme into real web application.
+								</p>
+								<p>
+									We really care for our buyers and so in case if you have any question or feedback, please feel free to get back to us.
+								</p>
+
+
+
+									<div id="structure" class="com-container">
+										<h4 class="page-header">Structure</h4>
+										<p>I have tried to follow the standards and modular structure while developing the theme. Following sections are explaining the theme File &amp; Folder, structure, html file struture and plugins.</p>
+
+										<div class="row p-t-20">
+											<div class="col-sm-12">
+												<h4>File &amp; Folder Structure</h4>
+												<hr/>
+
+												<pre class="prettyprint">
+
+├── html files
+Src/assets/
+├── Scss/
+│   └── All Scss files
+├── css/
+│   └── All css files.
+├── fonts/
+├── pages/
+│   └── All the pages related scripts
+├── images/
+│   └── All images
+├── plugins/
+│   └── The plugins files - which are not available through bower
+└── js/
+    └── All common Javascripts files
+
+</pre>
+										
+
+											<div class="row">
+												<div class="col-sm-12 p-t-30">
+													<h4>HTML Structure</h4>
+													<hr/>
+													<p>
+														<iframe src="html_str.html" width="100%" height="1040" style="border: none"></iframe>
+													</p>
+												</div>
+											</div>
+
+											<div class="col-sm-12 p-t-30">
+												<h4>CSS &amp; Sass</h4>
+												<hr/>
+												
+												<p class="m-t-20">
+                                                    Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
+                                                </p>
+                                                <p>
+                                                    All the css files are pre-compiled using compass compiler and provided inside the <code>assets/css/</code> folder. In case if you are not familiar with sass/scss or
+                                                    don't have any environment setup which can be used to compile these files, you can use these CSS files directly.
+                                                    But if you are familiar with saas, I'll suggest you to use the scss files.
+                                                </p>
+                                                <p>
+                                                    <i>Note that you will need to install compass, nodejs, npm, gulp etc in order to compile the scss file. I am sure you know this ;) </i>
+                                                </p>
+                                                <p>Files are explained below: </p>
+
+                                                <table class="table table-bordered m-0">
+													<thead>
+														<tr>
+															<th style="width: 20%;"><i class="ti-file"></i> File</th>
+															<th>Description</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+                                                                <code>bootstrap</code>
+                                                            </td>
+                                                            <td>
+                                                                Uplon uses the bootstrap 3.3.7.
+                                                            </td>
+														</tr>
+
+                                                        <tr>
+															<td>
+                                                                <code>style.sccs</code>/<code>style.css</code>
+                                                            </td>
+                                                            <td>
+                                                                This is main style file. The scss version is importing all the custom scss files. Each of the scss file is containing style for
+                                                                speicic element. E.g Buttons, checkbox, icons, forms, etc.
+                                                            </td>
+														</tr>
+
+														<tr>
+															<td>
+                                                                <code>_variable.scss</code>
+                                                            </td>
+                                                            <td>
+                                                                This file is containing all the constants values. This allows you to easily customize may things including colors, fonts, text sizes, etc.
+                                                            </td>
+														</tr>
+
+														<tr>
+															<td>
+                                                                <code>icons.scss / icons.css</code>
+                                                            </td>
+                                                            <td>
+                                                                Combines various font icons. You should remove the fonts you don't plan to use from this file and recompile it.
+                                                            </td>
+														</tr>
+
+														<tr>
+															<td>
+                                                                <code>_pages.scss</code>
+                                                            </td>
+                                                            <td>
+                                                                Pages contains the styles for all extra pages and pages. It has overwritten version of styles.
+                                                            </td>
+														</tr>
+
+                                                        <tr>
+															<td>
+                                                                <code>_forms.scss</code>
+                                                            </td>
+                                                            <td>
+                                                                The form's related styles are available into this file. You can easily change the styles for some of form elements.
+                                                            </td>
+														</tr>
+
+														<tr>
+															<td>
+                                                                <code>_form-advanced.scss</code>
+                                                            </td>
+                                                            <td>
+                                                                The form-advanced related styles are available into this file. You can easily change the styles for some of form elements.
+                                                            </td>
+														</tr>
+
+														<tr>
+															<td>
+                                                                <code>_core.scss</code>
+                                                            </td>
+                                                            <td>
+                                                                Common contains some common styles used in various pages.
+                                                            </td>
+														</tr>
+
+														<tr>
+															<td>
+                                                                <code>_buttons.scss</code>
+                                                            </td>
+                                                            <td>
+                                                                Button styles are available here.
+                                                            </td>
+														</tr>
+
+														<tr>
+															<td>
+                                                                <code>_charts.scss</code>
+                                                            </td>
+                                                            <td>
+                                                                All the chart related styles are present into this file.
+                                                            </td>
+														</tr>
+
+														<tr>
+															<td>
+                                                                <code>_checkbox-radio.scss</code>
+                                                            </td>
+                                                            <td>
+                                                                Custom checkboxes and radio button styles are available in this file.
+                                                            </td>
+														</tr>
+
+														<tr>
+															<td>
+                                                                <code>_helper.scss</code>
+                                                            </td>
+                                                            <td>
+                                                                Some of the helper classes are available in this file.
+                                                            </td>
+														</tr>
+
+														<tr>
+															<td>
+                                                                <code>_menu.scss</code>
+                                                            </td>
+                                                            <td>
+                                                                This includes the style for topbar, and left side bar.
+                                                            </td>
+														</tr>
+
+														<tr>
+															<td>
+                                                                <code>_modal.scss</code>
+                                                            </td>
+                                                            <td>
+                                                                Contains the style for modals.
+                                                            </td>
+														</tr>
+
+														<tr>
+															<td>
+                                                                <code>_alerts.scss</code>
+                                                            </td>
+                                                            <td>
+                                                                Notifications related styles are available in this file.
+                                                            </td>
+														</tr>
+
+														<tr>
+															<td>
+                                                                <code>_panel.scss</code>
+                                                            </td>
+                                                            <td>
+                                                                Panel related styles are available in this file.
+                                                            </td>
+														</tr>
+
+														<tr>
+															<td>
+                                                                <code>_invoice.scss</code>
+                                                            </td>
+                                                            <td>
+                                                                Invoice related custom styles are available in this file.
+                                                            </td>
+														</tr>
+
+														<tr>
+															<td>
+                                                                <code>_pricing.scss</code>
+                                                            </td>
+                                                            <td>
+                                                                Pricing related custom styles are available in this file.
+                                                            </td>
+														</tr>
+
+														<tr>
+															<td>
+                                                                <code>_timeline.scss</code>
+                                                            </td>
+                                                            <td>
+                                                                Timeline related custom styles are available in this file.
+                                                            </td>
+														</tr>
+
+														<tr>
+															<td>
+                                                                <code>_tables.scss</code>
+                                                            </td>
+                                                            <td>
+                                                                All the tables related styles are available in this file.
+                                                            </td>
+														</tr>
+
+														<tr>
+															<td>
+                                                                <code>_tabs.scss</code>
+                                                            </td>
+                                                            <td>
+                                                                Tabs related styles are available in this file.
+                                                            </td>
+														</tr>
+
+														<tr>
+															<td>
+                                                                <code>_typography.scss</code>
+                                                            </td>
+                                                            <td>
+                                                                Typography are available in this file.
+                                                            </td>
+														</tr>
+
+														<tr>
+															<td>
+                                                                <code>_widgets.scss</code>
+                                                            </td>
+                                                            <td>
+                                                                Contains the widgets related styles.
+                                                            </td>
+														</tr>
+
+                                                    </tbody>
+                                                </table>
+
+                                                
+											</div>
+										</div>
+
+										<div class="col-sm-12 p-t-30">
+												<h4>Javascript</h4>
+												<hr/>
+												<p class="m-t-20">
+                                                    SimpleAdmin uses jQuery, Bootstrap JS framework(at its core) and some of the third-party plugins. There are may more third party plugin which you can use according to your needs. The css is already containing matching style for these plugins so you will not need to do anything around it.
+                                                </p>
+
+                                                <p>Files are explained below: </p>
+
+                                                <table class="table table-bordered m-0">
+													<thead>
+														<tr>
+															<th style="width: 20%;"><i class="ti-file"></i> File</th>
+															<th>Description</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+                                                                <code>jquery.js</code>, <code>bootstrap.js</code>, <code>jquery.slimscroll</code>, etc.
+                                                                <!-- TODO -->
+
+                                                            </td>
+                                                            <td>
+                                                                These files are used at core of the theme.
+                                                            </td>
+														</tr>
+                                                        <tr>
+															<td>
+                                                                <code>jquery.app.js</code>
+                                                            </td>
+                                                            <td>
+                                                                This is a main js file. It contains the custom JS code needed for features including
+                                                                layout, sidebar, etc.
+                                                            </td>
+														</tr>
+
+                                                        <tr>
+															<td>
+                                                                <code>pages/*.js</code>
+                                                            </td>
+                                                            <td>
+                                                                These are the files containing pages specific code. They are mainly used for demo purpose.
+                                                            </td>
+														</tr>
+
+                                                        <tr>
+															<td>
+                                                                <code>plugins/**.js</code>
+                                                            </td>
+                                                            <td>
+                                                                All supported and integrated third-party plugins are included in here.
+                                                            </td>
+														</tr>
+                                                    </tbody>
+                                                </table>
+											</div>
+
+									</div>
+
+								
+
+										<div id="utilities" class="com-container">
+											<h4 class="page-header">Utilities</h4>
+											<p>The theme contains various utilies including some helper classes, widgets, etc. Please see below some helper classes.</p>
+
+											<p><b>Helper Classes:</b></p>
+											<table class="table table-bordered m-0">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Class</th>
+                                                        <th>Description</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td><b>.p-0</b>
+                                                        </td>
+                                                        <td>Removes all padding space</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td><b>.p-20</b>
+                                                        </td>
+                                                        <td>Adds 20px padding</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td><b>.p-t-50</b></td>
+                                                        <td>Adds 50px top padding</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td><b>.p-b-10</b></td>
+                                                        <td>Adds 10px bottom padding</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td><b>.p-l-0</b></td>
+                                                        <td>Remove left 0px padding</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td><b>.m-0</b></td>
+                                                        <td>Remove all margin</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td><b>.m-r-10</b></td>
+                                                        <td>Adds 10px right margin</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td><b>.m-l-10</b></td>
+                                                        <td>Adds 10px left margin</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td><b>.m-t-0</b></td>
+                                                        <td>Remove top margin</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td><b>.m-t-10</b></td>
+                                                        <td>Adds 10px top margin</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td><b>.m-t-30</b></td>
+                                                        <td>Adds 30px top margin</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td><b>.m-b-0</b></td>
+                                                        <td>Remove bottom margin</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td><b>.m-b-5</b></td>
+                                                        <td>Adds 5px bottom margin</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td><b>.m-b-20</b></td>
+                                                        <td>Adds 20px bottom margin</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td><b>.m-b-30</b></td>
+                                                        <td>Adds 30px bottom margin</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td><b>.font-normal</b></td>
+                                                        <td>font normal</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td><b>.font-13</b></td>
+                                                        <td>font size 13px</td>
+                                                    </tr>
+
+                                                    
+                                                    </tbody>
+                                                </table>
+										</div>
+
+
+										
+
+
+										<div id="credits" class="com-container">
+											<h4 class="page-header">Credits &amp; Official Documentation</h4>
+											<p>We've used the following resources as listed. These are some awesome creation and we are thankful to the community.</p>
+
+											<ul class="">
+								                <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+								                <li><a href="https://jquery.com/">Jquery</a></li>
+								                <li><a href="https://github.com/onokumus/metisMenu">Metis Menu</a></li>
+								                <li><a href="http://fortawesome.github.io/Font-Awesome/">Font-Awesome</a></li>
+								                <li><a href="https://materialdesignicons.com/">Material Design Icons</a></li>
+								                <li><a href="https://limonte.github.io/sweetalert2/">Sweet-Alert 2</a></li>
+								                <li><a href="http://areaaperta.com/nicescroll/">Nicescroll</a></li>
+								                <li><a href="http://arshaw.com/fullcalendar/">Full Calendar</a></li>
+								                <li><a href="https://github.com/xoxco/jQuery-Tags-Input">Tags Input</a></li>
+								                <li><a href="http://jdewit.github.com/bootstrap-timepicker">Bootstrap-timepicker</a></li>
+								                <li><a href="http://www.eyecon.ro/bootstrap-colorpicker">Bootstrap Colorpicker</a></li>
+								                <li><a href="https://select2.github.io/">Select2</a></li>
+								                <li><a href="https://www.datatables.net">Datatables</a></li>
+								                <li><a href="http://morrisjs.github.io/morris.js/">Morris</a></li>
+								                <li><a href="https://github.com/aterrien/jQuery-Knob">JQuery-Knob</a></li>
+								                <li><a href="https://hpneo.github.io/gmaps/">Gmaps</a></li>
+								                <li><a href="http://jqvmap.com">Vector Maps</a></li>
+								                <li><a href="http://uifaces.com/">Uifaces (images)</a></li>
+								                <li><a href="https://unsplash.com/">Unsplash (images)</a></li>
+								                <li><a href="http://www.flotcharts.org/">Flot-charts</a></li>
+								                <li><a href="http://ionden.com/">Ion-Slider</a></li>
+								                <li><a href="http://flatlogic.github.io/awesome-bootstrap-checkbox/demo/"> Checkbox and radio</a></li>
+								                <li><a href="http://abpetkov.github.io/switchery/">Switchery</a></li>
+								                <li><a href="https://github.com/istvan-ujjmeszaros/bootstrap-touchspin">Bootstrap touchspin</a></li>
+								                <li><a href="http://jdewit.github.io/bootstrap-timepicker/">Timepicker</a></li>
+								                <li><a href="https://bootstrap-datepicker.readthedocs.org/en/latest/">Datepicker</a></li>
+								                <li><a href="https://github.com/dangrossman/bootstrap-daterangepicker">Daterangepicker</a></li>
+								                <li><a href="http://parsleyjs.org/">Parsleyjs (Form validation)</a></li>
+								                
+								            </ul>
+										</div>
+
+										<div id="support" class="com-container">
+											<h4 class="page-header">Support</h4>
+											<p class="m-t-20">
+                                                    Once again thank you for your purchase. I'll be happy to answer the the questions you have related to the theme.
+                                                    In case if you have any suggestion or feature, request please feel free to contact me, I'll try to implement it and will release as part of future updates.
+                                                </p>
+
+                                                <p>
+                                                    Stay Awesome!
+                                                </p>
+                                                <p class="text-primary">
+                                                    - <strong>Coderthemes</strong>
+                                                </p>
+										</div>
+
+										<div id="changelog" class="com-container">
+
+											<p style="margin-top: 20px;"><strong  style="text-decoration: underline; font-weight: 900;">Version 1.1.0 </strong> &nbsp;&nbsp;&nbsp;<small class="text-muted"> 21 Jan 2017</small></p>
+											
+											<ul>
+												<li>
+													Added new layout(horizontal).
+												</li>
+											</ul>
+
+											<p style="margin-top: 20px;"><strong  style="text-decoration: underline; font-weight: 900;">Version 1.0.0 </strong> &nbsp;&nbsp;&nbsp;<small class="text-muted"> 10 Dec 2016</small></p>
+											
+											<ul>
+												<li>
+													Initial released
+												</li>
+											</ul>
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /#page-content-wrapper -->
+
+					<div class="text-center">
+						<p class="copy">Copyright © 2016 SimpleAdmin.</p>
+					</div>
+				</div>
+				<!-- /#wrapper -->
+
+				<!-- jQuery -->
+				<script src="js/jquery.js"></script>
+
+				<!-- Bootstrap Core JavaScript -->
+				<script src="js/bootstrap.min.js"></script>
+
+				<script src="js/jquery.easing.min.js"></script>
+
+				<script type="text/javascript" src="js/prettify.js"></script>
+
+				<!-- Menu Toggle Script -->
+				<script>
+
+					//jQuery for page scrolling feature - requires jQuery Easing plugin
+					$(function() {
+					    $('.sidebar-nav a').bind('click', function(event) {
+					        var $anchor = $(this);
+					        $('html, body').stop().animate({
+					            scrollTop: $($anchor.attr('href')).offset().top - 100
+					        }, 1500, 'easeInOutExpo');
+					        event.preventDefault();
+					    });
+					});
+				</script>
+
+			</body>
+
+			</html>
