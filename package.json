@@ -1,0 +1,19 @@
+{
+  "name": "militarycollect",
+  "version": "1.0.0",
+  "description": "assistance for military vets",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzimmerman902/project2.git"
+  },
+  "author": "Devin, Edwin, Beatriz, Adam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dzimmerman902/project2/issues"
+  },
+  "homepage": "https://github.com/dzimmerman902/project2#readme"
+}
