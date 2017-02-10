@@ -1,0 +1,346 @@
+/*
+
+[Responsive Stylesheet]
+
+Project: EnvAffiliateCase - Evanto Market Affiliate and Item Showcase Plugin
+Version: 1.0
+Author : http://codecanyon.net/user/themelooks
+
+[Table of contents]
+
+X. MEDIA QUERIES
+	- X-1 LARGE DEVICES, WIDE SCREENS
+	- X-2 MEDIUM DEVICES, DESKTOPS
+	- X-3 SMALL DEVICES, TABLETS
+	- X-4 SMALL DEVICES, SMARTPHONES
+	- X-5 CUSTOM, IPHONE RETINA
+
+*/
+
+/*------------------------------------*\
+    X. MEDIA QUERIES
+\*------------------------------------*/
+/* X-1 LARGE DEVICES, WIDE SCREENS */
+@media screen and (max-width: 1199px) {
+	.pp-sidebar {
+		width: 970px;
+	}
+	
+	#navbar > .nav > li > a {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+    /* PRODUCT LIST */
+	.pl-item-title {
+		width: 180px;
+	}
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+	.latest-products-metadata-content .sales {
+		float: none;
+		display: block;
+		margin-top: 10px;
+	}
+	.latest-products-metadata-content .action-btns a.btn {
+		float: none;
+		margin-top: 20px;
+	}
+	.lp-price-tag {
+		float: left;
+		width: 120px;
+		margin-top: 5px;
+	}
+}
+
+/* X-2 MEDIUM DEVICES, DESKTOPS */
+@media screen and (max-width: 991px) {
+	/* HEADER NAV AREA */
+    .header-navbar .navbar-header {
+        float: none;
+        margin-right: -15px;
+        margin-left: 0;
+    }
+    .header-navbar .navbar-toggle {
+        display: block;
+    }
+    .header-navbar .nav-logo {
+        margin-top: 4px;
+        display: inline-block;
+    }
+    #navbar {
+        display: none !important;
+        float: none !important;
+    }
+    #navbar.collapse.in {
+        display: block!important;
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 350px !important;
+        overflow: auto !important;
+        background-color: #fff;
+        box-shadow: 0 0 8px rgba(0,0,0,.28);
+        z-index: -1;
+    }
+    #navbar > .nav {
+        float: none;
+        margin: 0;
+        padding: 0;
+    }
+    #navbar > .nav {
+        float: none;
+    }
+    #navbar > .nav > li {
+        float: none;
+    }
+    #navbar > .nav > li > a {
+        padding: 15px 30px 11px;
+    }
+    #navbar > .nav > li.dropdown > .dropdown-menu {
+        position: relative;
+        width: 100%;
+        padding: 0 0 30px;
+        box-shadow: none;
+    }
+    #navbar > .nav > li.dropdown:hover > .dropdown-menu {
+        display: none;
+    }
+    #navbar > .nav > li.dropdown.open:hover > .dropdown-menu {
+        display: block;
+    }
+    #navbar > .nav > li.dropdown > .dropdown-menu > li > a {
+        padding: 15px 30px 11px;
+    }
+    #navbar .dropdown-menu.megamenu {
+        top: 0;
+        margin: 0;
+        padding: 0;
+        z-index: 1;
+    }
+    #navbar .megamenu .container {
+        padding: 0;
+        width: auto;
+    }
+    #navbar .megamenu-content {
+        box-shadow: none;
+    }
+    #navbar .megamenu-content > .row > div {
+        padding: 0;
+    }
+
+    #navbar .megamenu-content > .row {
+        margin: 0;
+    }
+    #navbar .megamenu a {
+        padding-left: 30px;
+    }
+	
+	.pp-sidebar {
+		display: none;
+	}
+    
+	/* SERVICE AREA */
+    .about-content-holder {
+        margin-bottom: 40px;
+    }
+    .service-item:nth-last-child(2),
+    .service-item:nth-last-child(3) {
+        margin-bottom: 40px;
+    }
+    
+	/* SKILLS AREA */
+    .skill-video {
+        position: relative;
+        width: 100%;
+        height: 645px;
+    }
+
+    .skills-description {
+        padding-left: 0;
+        padding-right: 0;
+        width: 720px;
+        margin: 0 auto;
+        float: none !important;
+    }
+    
+    .skills-progress-bars {
+        margin-top: 40px;
+    }
+	
+	/* LATEST PRODUCTS AREA */
+    .latest-product-item img {
+        width: 100%;
+    }
+    .latest-products-metadata {
+        margin-top: 15px;
+    }
+    .lpp-items {
+        display: none !important;
+    }
+    .twitter-feed-content {
+        height: auto;
+        margin-top: 30px;
+    }
+    
+	/* SUBSCRIBE FROM */
+    #subscribeForm {
+        margin-bottom: 20px;
+    }
+    #subscribeFormInput {
+        margin-bottom: 20px;
+    }
+    #subscribeForm button.btn {
+        display: block;
+        margin: 0 auto;
+    }
+    #subscribe h2 {
+        margin-bottom: 20px;
+    }
+    #subscribe h2, #subscribeForm {
+        text-align: center;
+    }
+    
+    /* MORE PRODUCTS AREA */
+    .mp-item-img {
+        max-height: none;
+    }
+    .mp-item-img img {
+        width: 100%;
+    }
+    
+    /* FEEDBACK ITEMS */
+    .feedback-slider {
+        margin-bottom: 140px;
+    }
+    
+    /* BLOG AREA */
+    .blog-item {
+        margin-bottom: 50px;
+    }
+    .blog-item-content h2 {
+        margin-top: 20px;
+    }
+    
+    /* FOOTER AREA */
+    .footer-about {
+        margin-bottom: 40px;
+    }
+}
+
+/* X-3 SMALL DEVICES, TABLETS */
+@media screen and (max-width: 767px) {
+	/* HEADER AREA */
+	.header-logo {
+		text-align: center;
+	}
+
+	/* SKILLS AREA */
+    .skills-description {
+        width: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+	/* COUNTER AREA */
+    .counter-holder {
+        margin-bottom: 50px;
+    }
+    .counter-holder:nth-child(3),
+    .counter-holder:nth-child(4) {
+        margin-bottom: 0;
+    }
+    
+	/* BACK TO TOP BUTTON */
+    .back-to-top {
+        right: 15px;
+        bottom: 15px;
+    }
+    
+	/* FOOTER AREA */
+    #footerSubscribeForm {
+        margin-bottom: 40px;
+    }
+}
+@media screen and (min-width: 480px) {
+    /* COUNTER AREA */
+    .clients-slider .owl-wrapper {
+        -webkit-transform: none !important;
+            -ms-transform: none !important;
+                transform: none !important;
+    }
+}
+
+/* X-4 SMALL DEVICES, SMARTPHONES */
+@media screen and (max-width: 480px) {
+    /* BANNER AREA */
+    .banner-content .heading {
+        font-size: 50px;
+    }
+	
+	/* SUBSCRIBE FROM */
+    #subscribeFormInput {
+        min-width: auto;
+        width: 100%;
+    }
+    #subscribeForm button.btn {
+        width: 100%;
+    }
+    
+    /* COUNTER AREA */
+    #counter > .container > .row > div {
+        width: 100%;
+        float: none;
+        margin-bottom: 30px;
+    }
+    #counter > .container > .row > div:last-child {
+        margin-bottom: 0;
+    }
+
+    /* MORE PRODUCTS AREA */
+    .mp-item-meta > span:nth-child(3) {
+        border-right: 1px solid #e9e9e9;
+    }
+    span.mp-item-meta-favorite {
+        display: none;
+    }
+	
+    /* PRODUCT LIST */
+	.pl-tab-nav li {
+		display: block;
+		width: auto;
+	}
+	.pl-tab-nav li a:before {
+		display: none;
+	}
+	
+	.pl-item-thumb {
+		padding-right: 22%;
+	}
+	.pl-item-details {
+		display: none;
+	}
+
+    /* FEEDBACK ITEMS */
+    .clients-holder:before,
+    .clients-holder:after {
+        display: none;
+    }
+}
+
+/* X-5 CUSTOM, IPHONE RETINA */
+@media screen and (max-width: 320px) {
+    /* BANNER AREA */
+    .banner-content .heading {
+        font-size: 45px;
+    }
+
+    /* PRODUCT LIST */
+	.pl-item-sold {
+		display: none;
+	}
+	.pl-item-price {
+		font-size: 20px;
+		width: 0;
+	}
+}

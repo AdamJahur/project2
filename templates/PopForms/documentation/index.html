@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9"> <![endif]-->
+<!--[if !(IE)]><!--><html lang=""><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PopForms - Material Design Modal Forms</title>
+
+    <!-- ====Favicons==== -->
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+	<link rel="icon" href="img/favicon.png" type="image/x-icon">
+	
+	
+    <!-- ====Google Font Stylesheet==== -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
+
+    <!-- ====Font Awesome Stylesheet==== -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+	
+    <!-- ====Bootstrap Stylesheet==== -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	
+    <!-- ====Prism Stylesheet==== -->
+    <link href="css/prism.css" rel="stylesheet">
+	
+    <!-- ====Main Stylesheet==== -->
+    <link href="style.css" rel="stylesheet">
+	
+    <!-- ====Responsive Stylesheet==== -->
+    <link href="css/responsive-style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="bg-whitesmoke">
+
+	<!-- Wrapper Start -->
+	<div class="wrapper">
+		<!-- Header Area Start -->
+		<div id="header" class="shadow">
+			<div class="header-navbar navbar">
+				<div class="container">
+					<!-- Header Logo Start -->
+					<div class="nav-logo text-center">
+						<h1 class="logo-text"><a href="#"><span>Pop</span>Forms</a></h1>
+					</div>
+					<!-- Header Logo End -->
+				</div>
+			</div>
+		</div>
+		<!-- Header Area End -->
+		
+		<!-- Documentation Content Start -->
+		<div id="doc">
+			<div class="container">
+				<div class="step">
+		            <h1>PopForms</h1>
+					<h2>Material Design Modal Forms</h2>
+		            <div id="documenter_buttons">
+		                <a href="http://codecanyon.net/user/themelooks#contact" class="btn btn-primary btn-large">Contact</a>
+						<a href="http://themelooks.com/" class="btn btn-primary btn-large">Support</a>
+		            </div>
+		            <hr>
+		            <ul>
+		                <li>Created: 29/05/2016</li>
+		                <li>By: <a href="http://themelooks.com/" class="dark underlined">ThemeLooks</a></li>
+		                <li><a href="http://themelooks.com/" class="dark underlined">www.themelooks.com</a>
+		                </li>
+		                <li>Email: <a href="mailto:support@themelooks.com" class="dark underlined">support@themelooks.com</a>
+		                </li>
+		            </ul>
+		            <p>Thank you for purchasing my item. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themelooks.com/" class="dark underlined">here</a>. Thanks so much!</p>
+					
+					<hr class="notop">
+
+		            <h3>How to get help:</h3>
+					<p>We will respond to buyers' questions via the contact form on our profile. We run support 24/7. You can expect a response within 24 hours.</p>
+					<ul>
+						<strong>Support requests are for:</strong>
+						<li>Help using templates</li>
+						<li>Instructions setting up templates</li>
+						<li>Bug reports and fixes</li>
+					</ul>
+					<ul>
+						<strong>Support requests aren’t for:</strong>
+						<li>Help with 3rd party plugins</li>
+						<li>Integration of 3rd party plugins</li>
+						<li>Free Customization Requests of our templates</li>
+					</ul>
+
+					<hr class="notop">
+
+					<p><strong>PopForms</strong> is a <strong>Material Design Modal Forms Set</strong> including login form, sign up form, forgot password form, subscribe from and contact form. Anyone can easily update/edit this plugin to follow our <strong>Well Sorted Documentation.</strong></p>
+
+					<h3>Main Features of "PopForms":</h3>
+					<ul>
+		                <li>Based On Material Design Lite</li>
+						<li>Latest Bootstrap v3.3.6 Ready</li>
+		                <li>Login Form</li>
+		                <li>Sign Up Form</li>
+		                <li>Forgot Password Form</li>
+		                <li>Subscribe From</li>
+		                <li>Working Contact Form</li>
+						<li>Unlimited Material Colors</li>
+						<li>Fully Responsive</li>
+						<li>Modern Cross Browser Support</li>
+						<li>W3C Validate Code</li>
+					</ul>
+					
+					<h3>Other Features of "PopForms":</h3>
+					<ul>
+						<li>Google Fonts</li>
+						<li>FontAwesome Icons</li>
+						<li>Well Documented</li>
+					</ul>
+					
+					<hr class="notop">
+				</div>
+
+				<div class="step">
+					<h2><i class="fa fa-hashtag"></i> Login Form Modal</h2>
+					
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Preview:</p>
+					<img src="img/login-form-modal.png" alt="" class="img-responsive" />
+					
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Markup:</p>
+<pre class="line-numbers language-html"><code>&lt;!-- Login Form Start -->
+&lt;div class="modal fade" id="loginFormModal" tabindex="-1" role="dialog" aria-labelledby="loginForm">
+	&lt;div class="modal-dialog" role="document">
+		&lt;div class="modal-content">
+			&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close">&lt;span aria-hidden="true">&times;&lt;/span>&lt;/button>
+			&lt;div class="loginForm">
+				&lt;div class="mdl-card mdl-shadow--2dp">
+					&lt;div class="mdl-card__title mdl-card--expand">
+						&lt;img src="img/logo.png" alt="">
+					&lt;/div>
+					&lt;div class="mdl-card__supporting-text">
+						&lt;form action="#" method="post" id="loginForm">
+							&lt;div class="mdl-textfield mdl-js-textfield">
+								&lt;input class="mdl-textfield__input" type="text" name="loginUsername" id="loginUsername">
+								&lt;label class="mdl-textfield__label" for="loginUsername">Username&lt;/label>
+							&lt;/div>
+							&lt;div class="mdl-textfield mdl-js-textfield">
+								&lt;input class="mdl-textfield__input" type="password" name="loginPassword" id="loginPassword">
+								&lt;label class="mdl-textfield__label" for="loginPassword">Password&lt;/label>
+							&lt;/div>
+							
+							&lt;button type="submit" class="login-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Login&lt;/button>
+						&lt;/form>
+					&lt;/div>
+					&lt;div class="mdl-card__actions mdl-card--border clearfix">
+						&lt;a href="#" class="pull-left mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-toggle="modal" data-target="#forgotFormModal" data-dismiss="modal">
+							Forgot Password?
+						&lt;/a>
+						&lt;a href="#" class="pull-right mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-toggle="modal" data-target="#signupFormModal" data-dismiss="modal">
+							Create An Account
+						&lt;/a>
+					&lt;/div>
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+&lt;!-- Login Form End --></code></pre>
+
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Style:</p>
+<pre class="line-numbers language-css"><code>/*------------------------------------*\
+    4. LOGIN MODAL
+\*------------------------------------*/
+#loginFormModal {
+    padding: 0 20px;
+}
+#loginFormModal .modal-dialog {
+    max-width: 360px;
+    margin: 30px auto;
+}
+#loginFormModal .modal-content {
+    background-color: transparent;
+}
+
+.loginForm .mdl-card {
+    width: auto;
+}
+.loginForm .mdl-card__title {
+    padding-top: 0;
+}
+.loginForm .mdl-card__title img {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+.loginForm .mdl-card__supporting-text {
+    width: 100%;
+}
+
+#loginForm input {
+    outline: 0;
+}
+#loginForm label {
+    margin-bottom: 0;
+    font-weight: 100;
+    color: #737373;
+}
+#loginForm input.error + label:after {
+    background-color: #ff5252;
+    left: 0;
+    width: 100%;
+    visibility: visible;
+}
+#loginForm .mdl-textfield {
+    width: 100%;
+}
+.loginForm .mdl-card__actions {
+    margin-top: 5px;
+}
+.loginForm .mdl-card__actions a {
+    font-size: 12px;
+}</code></pre>
+
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Script:</p>
+<pre class="line-numbers language-js"><code>var loginForm = $('#loginForm');
+		
+if ( loginForm.length ) {
+	loginForm.validate({
+		rules: {
+			loginUsername: "required",
+			loginPassword: "required"
+		},
+		errorPlacement: function (error, element) {
+			return true;
+		}
+	});
+}</code></pre>
+				</div>
+
+				<div class="step">
+					<h2><i class="fa fa-hashtag"></i> Signup Form Modal</h2>
+					
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Preview:</p>
+					<img src="img/signup-form-modal.png" alt="" class="img-responsive" />
+					
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Markup:</p>
+<pre class="line-numbers language-html"><code>&lt;!-- Signup Form Start -->
+&lt;div class="modal fade" id="signupFormModal" tabindex="-1" role="dialog" aria-labelledby="signupFormModal">
+	&lt;div class="modal-dialog" role="document">
+		&lt;div class="modal-content">
+			&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close">&lt;span aria-hidden="true">&times;&lt;/span>&lt;/button>
+			&lt;div class="signupForm">
+				&lt;div class="mdl-card mdl-shadow--2dp">
+					&lt;div class="mdl-card__title mdl-card--expand">
+						&lt;img src="img/logo.png" alt="">
+					&lt;/div>
+					&lt;div class="mdl-card__supporting-text">
+						&lt;form action="#" method="post" id="signupForm">
+							&lt;div class="mdl-textfield mdl-js-textfield">
+								&lt;input class="mdl-textfield__input" type="text" name="singupName" id="singupName">
+								&lt;label class="mdl-textfield__label" for="singupName">Full Name&lt;/label>
+							&lt;/div>
+							&lt;div class="mdl-textfield mdl-js-textfield">
+								&lt;input class="mdl-textfield__input" type="text" name="singupUsername" id="singupUsername">
+								&lt;label class="mdl-textfield__label" for="singupUsername">Username&lt;/label>
+							&lt;/div>
+							&lt;div class="mdl-textfield mdl-js-textfield">
+								&lt;input class="mdl-textfield__input" type="text" name="singupEmail" id="singupEmail">
+								&lt;label class="mdl-textfield__label" for="singupEmail">E-mail Address&lt;/label>
+							&lt;/div>
+							&lt;div class="mdl-textfield mdl-js-textfield">
+								&lt;input class="mdl-textfield__input" type="password" name="singupPassword" id="singupPassword">
+								&lt;label class="mdl-textfield__label" for="singupPassword">Password&lt;/label>
+							&lt;/div>
+							&lt;div class="mdl-textfield mdl-js-textfield">
+								&lt;input class="mdl-textfield__input" type="password" name="singupPasswordAgain" id="singupPasswordAgain">
+								&lt;label class="mdl-textfield__label" for="singupPasswordAgain">Re-Type Password&lt;/label>
+							&lt;/div>
+							
+							&lt;button type="submit" class="singup-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Singup&lt;/button>
+						&lt;/form>
+					&lt;/div>
+					&lt;div class="mdl-card__actions mdl-card--border clearfix">
+						&lt;p class="pull-left">Already Have An Account?&lt;/p>
+						&lt;a href="#" class="pull-right mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-toggle="modal" data-target="#loginFormModal" data-dismiss="modal">
+							Login
+						&lt;/a>
+					&lt;/div>
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+&lt;!-- Signup Form End --></code></pre>
+
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Style:</p>
+<pre class="line-numbers language-css"><code>/*------------------------------------*\
+    5. SIGNUP MODAL
+\*------------------------------------*/
+#signupFormModal {
+    padding: 0 20px;
+}
+#signupFormModal .modal-dialog {
+    max-width: 360px;
+    margin: 30px auto;
+}
+#signupFormModal .modal-content {
+    background-color: transparent;
+}
+
+.signupForm .mdl-card {
+    width: auto;
+}
+.signupForm .mdl-card__title {
+    padding-top: 0;
+}
+.signupForm .mdl-card__title img {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+.signupForm .mdl-card__supporting-text {
+    width: 100%;
+}
+
+#signupForm input {
+    outline: 0;
+}
+#signupForm label {
+    margin-bottom: 0;
+    font-weight: 100;
+    color: #737373;
+}
+#signupForm input.error + label:after {
+    background-color: #ff5252;
+    left: 0;
+    width: 100%;
+    visibility: visible;
+}
+#signupForm .mdl-textfield {
+    width: 100%;
+}
+.signupForm .mdl-card__actions {
+    margin-top: 5px;
+    padding-left: 15px;
+}
+.signupForm .mdl-card__actions p {
+    margin-bottom: 0;
+    margin-top: 8px;
+}
+.signupForm .mdl-card__actions a {
+    font-size: 12px;
+}</code></pre>
+
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Script:</p>
+<pre class="line-numbers language-js"><code>var signupForm = $('#signupForm');
+		
+if ( signupForm.length ) {
+	signupForm.validate({
+		rules: {
+			singupName: "required",
+			singupUsername: "required",
+			singupEmail: {
+				required: true,
+				email: true
+			},
+			singupPassword: "required",
+			singupPasswordAgain: {
+				equalTo: "#singupPassword"
+			}
+		},
+		errorPlacement: function (error, element) {
+			return true;
+		}
+	});
+}</code></pre>
+				</div>
+
+				<div class="step">
+					<h2><i class="fa fa-hashtag"></i> Forgot Form Modal</h2>
+					
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Preview:</p>
+					<img src="img/forgot-form-modal.png" alt="" class="img-responsive" />
+					
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Markup:</p>
+<pre class="line-numbers language-html"><code>&lt;!-- Forgot Form Start -->
+&lt;div class="modal fade" id="forgotFormModal" tabindex="-1" role="dialog" aria-labelledby="signupFormModal">
+	&lt;div class="modal-dialog" role="document">
+		&lt;div class="modal-content">
+			&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close">&lt;span aria-hidden="true">&times;&lt;/span>&lt;/button>
+			&lt;div class="forgotForm">
+				&lt;div class="mdl-card mdl-shadow--2dp">
+					&lt;div class="mdl-card__title mdl-card--expand">
+						&lt;img src="img/logo.png" alt="">
+					&lt;/div>
+					&lt;div class="mdl-card__supporting-text">
+						&lt;form action="#" method="post" id="forgotForm">
+							&lt;div class="mdl-textfield mdl-js-textfield">
+								&lt;input class="mdl-textfield__input" type="text" name="forgotEmail" id="forgotEmail">
+								&lt;label class="mdl-textfield__label" for="forgotEmail">E-mail Address&lt;/label>
+							&lt;/div>
+							
+							&lt;button type="submit" class="forgot-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Recover&lt;/button>
+						&lt;/form>
+					&lt;/div>
+					&lt;div class="mdl-card__actions mdl-card--border clearfix">
+						&lt;p class="pull-left">No Account?&lt;/p>
+						&lt;a href="#" class="pull-right mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-toggle="modal" data-target="#signupFormModal" data-dismiss="modal">
+							Create An Account
+						&lt;/a>
+					&lt;/div>
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+&lt;!-- Forgot Form End --></code></pre>
+
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Style:</p>
+<pre class="line-numbers language-css"><code>/*------------------------------------*\
+    6. FORGOT MODAL
+\*------------------------------------*/
+#forgotFormModal {
+    padding: 0 20px;
+}
+#forgotFormModal .modal-dialog {
+    max-width: 360px;
+    margin: 30px auto;
+}
+#forgotFormModal .modal-content {
+    background-color: transparent;
+}
+
+.forgotForm .mdl-card {
+    width: auto;
+}
+.forgotForm .mdl-card__title {
+    padding-top: 0;
+}
+.forgotForm .mdl-card__title img {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+.forgotForm .mdl-card__supporting-text {
+    width: 100%;
+}
+
+#forgotForm input {
+    outline: 0;
+}
+#forgotForm label {
+    margin-bottom: 0;
+    font-weight: 100;
+    color: #737373;
+}
+#forgotForm input.error + label:after {
+    background-color: #ff5252;
+    left: 0;
+    width: 100%;
+    visibility: visible;
+}
+#forgotForm .mdl-textfield {
+    width: 100%;
+}
+.forgotForm .mdl-card__actions {
+    margin-top: 5px;
+    padding-left: 15px;
+}
+.forgotForm .mdl-card__actions p {
+    margin-bottom: 0;
+    margin-top: 8px;
+}
+.forgotForm .mdl-card__actions a {
+    font-size: 12px;
+}</code></pre>
+
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Script:</p>
+<pre class="line-numbers language-js"><code>var forgotForm = $('#forgotForm');
+		
+if ( forgotForm.length ) {
+	forgotForm.validate({
+		rules: {
+			forgotEmail: {
+				required: true,
+				email: true
+			}
+		},
+		errorPlacement: function (error, element) {
+			return true;
+		}
+	});
+}</code></pre>
+				</div>
+
+				<div class="step">
+					<h2><i class="fa fa-hashtag"></i> Subscribe Form Modal</h2>
+					
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Preview:</p>
+					<img src="img/subscribe-form-modal.png" alt="" class="img-responsive" />
+					
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Markup:</p>
+<pre class="line-numbers language-html"><code>&lt;!-- Subscribe Form Start -->
+&lt;div class="modal fade" id="subscribeFormModal" tabindex="-1" role="dialog" aria-labelledby="subscribeFormModal">
+	&lt;div class="modal-dialog" role="document">
+		&lt;div class="modal-content">
+			&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close">&lt;span aria-hidden="true">&times;&lt;/span>&lt;/button>
+			&lt;div class="subscribeForm">
+				&lt;div class="mdl-card mdl-shadow--2dp">
+					&lt;div class="mdl-card__title mdl-card--expand">
+						&lt;img src="img/logo.png" alt="">
+					&lt;/div>
+					&lt;div class="mdl-card__supporting-text">
+						&lt;form action="#" method="post" id="subscribeForm">
+							&lt;div class="mdl-textfield mdl-js-textfield">
+								&lt;input class="mdl-textfield__input" type="text" name="subscribeEmail" id="subscribeEmail">
+								&lt;label class="mdl-textfield__label" for="subscribeEmail">E-mail Address&lt;/label>
+							&lt;/div>
+							
+							&lt;button type="submit" class="subscribe-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Subscribe&lt;/button>
+						&lt;/form>
+					&lt;/div>
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+&lt;!-- Subscribe Form End --></code></pre>
+
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Style:</p>
+<pre class="line-numbers language-css"><code>/*------------------------------------*\
+    7. SUBSCRIBE MODAL
+\*------------------------------------*/
+#subscribeFormModal {
+    padding: 0 20px;
+}
+#subscribeFormModal .modal-dialog {
+    max-width: 360px;
+    margin: 30px auto;
+}
+#subscribeFormModal .modal-content {
+    background-color: transparent;
+}
+
+.subscribeForm .mdl-card {
+    width: auto;
+}
+.subscribeForm .mdl-card__title {
+    padding-top: 0;
+}
+.subscribeForm .mdl-card__title img {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+.subscribeForm .mdl-card__supporting-text {
+    width: 100%;
+}
+
+#subscribeForm input {
+    outline: 0;
+}
+#subscribeForm label {
+    margin-bottom: 0;
+    font-weight: 100;
+    color: #737373;
+}
+#subscribeForm input.error + label:after {
+    background-color: #ff5252;
+    left: 0;
+    width: 100%;
+    visibility: visible;
+}
+#subscribeForm .mdl-textfield {
+    width: 100%;
+}</code></pre>
+
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Script:</p>
+<pre class="line-numbers language-js"><code>var subscribeForm = $('#subscribeForm');
+		
+if ( subscribeForm.length ) {
+	subscribeForm.validate({
+		rules: {
+			subscribeEmail: {
+				required: true,
+				email: true
+			}
+		},
+		errorPlacement: function (error, element) {
+			return true;
+		}
+	});
+}</code></pre>
+				</div>
+
+				<div class="step">
+					<h2><i class="fa fa-hashtag"></i> Contact Form Modal</h2>
+					
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Preview:</p>
+					<img src="img/contact-form-modal.png" alt="" class="img-responsive" />
+					
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Markup:</p>
+<pre class="line-numbers language-html"><code>&lt;!-- Contact Form Start -->
+&lt;div class="modal fade" id="contactFormModal" tabindex="-1" role="dialog" aria-labelledby="contactFormModal">
+	&lt;div class="modal-dialog" role="document">
+		&lt;div class="modal-content">
+			&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close">&lt;span aria-hidden="true">&times;&lt;/span>&lt;/button>
+			&lt;div class="contactForm">
+				&lt;div class="mdl-card mdl-shadow--2dp">
+					&lt;div class="mdl-card__title mdl-card--expand">
+						&lt;img src="img/logo.png" alt="">
+					&lt;/div>
+					&lt;div class="mdl-card__supporting-text">
+						&lt;form action="#" method="post" id="contactForm">
+							&lt;div class="row">
+								&lt;div class="col-md-6">
+									&lt;div class="mdl-textfield mdl-js-textfield">
+										&lt;input class="mdl-textfield__input" type="text" name="contactName" id="contactName">
+										&lt;label class="mdl-textfield__label" for="contactName">Full Name&lt;/label>
+									&lt;/div>
+								&lt;/div>
+								&lt;div class="col-md-6">
+									&lt;div class="mdl-textfield mdl-js-textfield">
+										&lt;input class="mdl-textfield__input" type="text" name="contactEmail" id="contactEmail">
+										&lt;label class="mdl-textfield__label" for="contactEmail">E-mail Address&lt;/label>
+									&lt;/div>
+								&lt;/div>
+							&lt;/div>
+							&lt;div class="mdl-textfield mdl-js-textfield">
+								&lt;input class="mdl-textfield__input" type="text" name="contactSubject" id="contactSubject">
+								&lt;label class="mdl-textfield__label" for="contactSubject">Subject&lt;/label>
+							&lt;/div>
+							&lt;div class="mdl-textfield mdl-js-textfield">
+								&lt;textarea class="mdl-textfield__input" name="contactMessage" id="contactMessage">&lt;/textarea>
+								&lt;label class="mdl-textfield__label" for="contactMessage">Message&lt;/label>
+							&lt;/div>
+							
+							&lt;button type="submit" class="contact-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Send&lt;/button>
+						&lt;/form>
+					&lt;/div>
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+&lt;!-- Contact Form End --></code></pre>
+
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Style:</p>
+<pre class="line-numbers language-css"><code>/*------------------------------------*\
+    8. CONTACT MODAL
+\*------------------------------------*/
+#contactFormModal {
+    padding: 0 20px;
+}
+#contactFormModal .modal-dialog {
+    max-width: 600px;
+    margin: 30px auto;
+}
+#contactFormModal .modal-content {
+    background-color: transparent;
+}
+
+.contactForm .mdl-card {
+    width: auto;
+}
+.contactForm .mdl-card__title {
+    padding-top: 0;
+}
+.contactForm .mdl-card__title img {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+.contactForm .mdl-card__supporting-text {
+    width: 100%;
+}
+
+#contactForm input {
+    outline: 0;
+}
+#contactForm label {
+    margin-bottom: 0;
+    font-weight: 100;
+    color: #737373;
+}
+#contactForm input.error + label:after,
+#contactForm textarea.error + label:after {
+    background-color: #ff5252;
+    left: 0;
+    width: 100%;
+    visibility: visible;
+}
+#contactForm .mdl-textfield {
+    width: 100%;
+}
+#contactMessage {
+    min-height: 80px;
+    border-color: rgba(0,0,0,.12);
+}</code></pre>
+
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Script:</p>
+<pre class="line-numbers language-js"><code>var contactForm = $('#contactForm');
+		
+if ( contactForm.length ) {
+	contactForm.validate({
+		rules: {
+			contactName: "required",
+			contactEmail: {
+				required: true,
+				email: true
+			},
+			contactSubject: "required",
+			contactMessage: "required"
+		},
+		errorPlacement: function (error, element) {
+			return true;
+		}
+	});
+}</code></pre>
+
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> How to change my "Email Address" (Sendmail.php)?</p>
+					<ul>
+						<li>Open Up your <strong><i>'sendmail.php'</i></strong> file.</li>
+						<li>Then Search For the Comment <strong><i>'// Replace this with your own email address'</i></strong></li>
+						<li>Update The Email Address<strong><i>'example@example.com'</i></strong> and Owner Name <strong><i>'Example'</i></strong> from there.</li>
+					</ul>
+					<img src="img/email-address.png" alt="">
+				</div>
+
+				<div class="step">
+					<h2><i class="fa fa-hashtag"></i> Code Structure:</h2>
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> HTML Structure:</p>
+					<img src="img/html-structure-1.png" alt="" class="img-responsive">
+					<img src="img/html-structure-2.png" alt="" class="img-responsive">
+
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> CSS Structure:</p>
+					<p><small>This Plugin using the following CSS files:</small></p>
+					<ul>
+						<li><strong>css/bootstrap.min.css</strong> - The main responsive grid stylesheets, from Bootstrap 3 framework. It is recommended to make any changes/additions to style.css and keep bootsrap.css as it are. In this way, you can easily upgrade the grid framework when Bootstrap releases an update.</li>
+						<li><strong>css/font-awesome.min.css</strong> - The css file using for font-awesome icons.</li>
+						<li><strong>css/material.min.css</strong> - The css file using for material design lite library.</li>
+						<li><strong>css/style.css</strong> - The main css file.</li>
+						<li><strong>css/main-color-1.css</strong> - The css file using for color switcher.</li>
+					</ul>
+					<img src="img/css-structure-1.png" alt="" class="img-responsive">
+					<img src="img/css-structure-2.png" alt="" class="img-responsive">
+
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> JS Structure:</p>
+					<p><small>This Plugin using the following JS files:</small></p>
+					<ul>
+						<li><strong>css/jquery-2.2.2.min.js</strong> - The jQuery Framework.</li>
+						<li><strong>css/bootstrap.min.js</strong> - The main js file that hook the supported scripts of Bootstrap 3 framework.</li>
+						<li><strong>css/material.min.js</strong> - The main js file for material design lite library.</li>
+						<li><strong>css/jquery.validate.min.js</strong> - The main js file for material design lite library.</li>
+						<li><strong>css/main.js</strong> - The main script</li>
+						<li><strong>css/color-switcher.js</strong> - The main js file for color switcher</li>
+					</ul>
+					<img src="img/js-structure-1.png" alt="" class="img-responsive">
+					<img src="img/js-structure-2.png" alt="" class="img-responsive">
+				</div>
+
+				<div class="step">
+					<h2><i class="fa fa-hashtag"></i> Source and Credits:</h2>
+			
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Photos:</p>
+					<ul>
+						<li><i>All '<u>images</u>' used on the demo site is for demonstration purposes only and are not included in the main download file.</i></li>
+						<li>All Images Collected From <i><a href="https://images.google.com/" class="dark">'Google Image Search'</a></i></li>
+					</ul>
+					
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Fonts Used:</p>
+					<ul>
+						<li>Google Fonts (Raleway) - <a href="http://www.google.com/webfonts" class="dark">http://www.google.com/webfonts</a></li>
+						<li>Font Awesome - <a href="http://fontawesome.io/" class="dark">http://fontawesome.io/</a></li>
+					</ul>
+					
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Frameworks / Libraries:</p>
+					<ul>
+						<li>jQuery - <a href="https://jquery.com/" class="dark">https://jquery.com/</a></li>
+						<li>Twitter Bootstrap - <a href="http://getbootstrap.com" class="dark">http://getbootstrap.com</a></li>
+						<li>Material Design Lite - <a href="https://github.com/google/material-design-lite" class="dark">https://github.com/google/material-design-lite</a></li>
+					</ul>
+					
+					<p><i class="fa fa-hashtag"></i><i class="fa fa-hashtag"></i> Plugins Used:</p>
+					<ul>
+						<li>jQuery Validate - <a href="https://github.com/jzaefferer/jquery-validation" class="dark">https://github.com/jzaefferer/jquery-validation</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Documentation Content End -->
+		
+        <!-- Copyright Start -->
+        <div class="copyright">
+            <div class="container">
+                <p>Copyright 2016 &copy; <a href="http://themelooks.com/">ThemeLooks</a>. All Rights Reserved.</p>
+            </div>
+        </div>
+        <!-- Copyright End -->
+	</div>
+	<!-- Wrapper End -->
+
+    <!-- ====Prism Plugin JavaScript==== -->
+    <script src="js/prism.js"></script>
+</body>
+</html>
