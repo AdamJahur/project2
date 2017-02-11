@@ -51,5 +51,5 @@ module.exports = function(sequelize, DataTypes) {
 		}
 	});
 
-	Employer.sync();
+	return Employer;
 }
