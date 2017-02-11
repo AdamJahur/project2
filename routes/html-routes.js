@@ -12,7 +12,7 @@ module.exports = function(app) {
 
 	app.get("/", function(req, res) {
 
-		res.render("index");
+		res.render("home");
 	});
 
 	app.get("/home", function(req, res) {
@@ -24,4 +24,13 @@ module.exports = function(app) {
 
 		res.render("team");
 	});
+
+	app.get("/vetTable", function(req, res) {
+
+		res.render("team");
+	});
+
+
+
+
 };
