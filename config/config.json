@@ -3,7 +3,7 @@
   "development": {
     "username": "root",
     "password": "35cYqeqPam5g",
-    "database": "blogger",
+    "database": "military_connect",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
