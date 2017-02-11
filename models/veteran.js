@@ -1,11 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
   var Veteran = sequelize.define("Veteran", {
     id: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        primaryKey: true
     },
     rank: {
       type: DataTypes.TEXT,
