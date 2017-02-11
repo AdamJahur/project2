@@ -18,7 +18,9 @@ module.exports = function(sequelize, DataTypes) {
 		bio: {
 			type: DataTypes.STRING,
 			allowNull: false
-		}
+		},
+	}, {
+		timestamps: false
 	});
 
 	return Admin;	

@@ -1,8 +1,8 @@
-var Sequelize = require('sequelize');
+// var Sequelize = require('sequelize');
 
-var sequelize = new Sequelize('military_connect', 'root', '35cYqeqPam5g', {
-	host: 'localhost',
-	dialect: 'mysql'
-});
+// var sequelize = new Sequelize('military_connect', 'root', '35cYqeqPam5g', {
+// 	host: 'localhost',
+// 	dialect: 'mysql'
+// });
 
-module.exports = sequelize;
+// module.exports = sequelize;
