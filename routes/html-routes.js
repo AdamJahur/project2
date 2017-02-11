@@ -24,4 +24,9 @@ module.exports = function(app) {
 
 		res.render("team");
 	});
+
+	app.get("/veteran", function(req, res) {
+
+		res.render("vetTable");
+	});
 };
