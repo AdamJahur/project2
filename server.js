@@ -30,14 +30,19 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+// Set Passport
+var passport = require("passport");
+var logger = require("morgan");
+app.use(logger('combined'));
+app.use(passport.initialize());
+app.use(passport.session());
 // Routes =============================================================
 
 require("./routes/html-routes.js")(app);
 require("./routes/team-api-routes.js")(app);
-// require("./routes/author-api-routes.js")(app);
 
 // Syncing our sequelize models and then starting our express app
-db.sequelize.sync({ force: false }).then(function() {
+db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });

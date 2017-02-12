@@ -22,4 +22,25 @@ $(document).ready(function() {
 		console.log(teamData);
 		$.post("/api/addteam", teamData)
 	}
+
+	var url = window.location.search;
+	var profileId;
+
+	if (url.indexOf("?profile_id") !== -1) {
+		profileId = url.split("=")[1];
+		profileTeam(profileId);
+	}
+
+	function profileTeam(profile) {
+		console.log("Profile ID:", profile);
+		profileId = profile || "";
+		if (profileId) {
+			profileId = "/?profile_id=" + profileId;
+		}
+		console.log("Full Profile ID: ", profileId)
+
+		$.get("/api/profileteam/" + profile, function(data) {
+			console.log(data);
+		});
+	}
 })
