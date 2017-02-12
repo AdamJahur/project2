@@ -26,7 +26,25 @@ module.exports = function(app) {
 	});
 
 	app.get("/veteran", function(req, res) {
+			db.Veterans.findall({}).then(function(dbVeterans){
+				var data = [];
 
+				console.log(dbVeterans);
+
+				for (var i = 0; i < dbVeterans.length; i++) {
+					var input = dbVeterans[i].dataValues;
+					data.push(input);
+				}
+
+					var hbsObject = {
+					veterans: data
+				}
+
+				console.log(hbsObject);
+				res.render("/veteran", hbsObject);
+
+
+			});
 		res.render("vetTable");
 	});
 };
