@@ -43,4 +43,9 @@ module.exports = function(app) {
 
 		});
 	});
+
+	app.get("/vetHome", function(req, res) {
+
+		res.render("vethtml", {layout: 'main'})
+	});
 };
