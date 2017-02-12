@@ -24,4 +24,9 @@ module.exports = function(app) {
 
 		res.render("team");
 	});
+
+	app.get("/vetHome", function(req, res) {
+
+		res.render("vethtml", {layout: 'main'})
+	});
 };
