@@ -17,6 +17,8 @@ module.exports = function(app) {
 			
 			var data = [];
 
+			console.log(dbAdmin);
+
 			for (i = 0; i < dbAdmin.length; i++) {
 
 				var input = dbAdmin[i].dataValues;
