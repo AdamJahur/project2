@@ -1,74 +1,68 @@
 module.exports = function(sequelize, DataTypes) {
+  
   var Veteran = sequelize.define("Veteran", {
+
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true
   },
     rank: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
-      len: [1]
     },
     firstName: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
-      len: [1]
     },
     LastName: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
-      len: [1]
     },
     email: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
-      len: [1]
     },
     phoneNumber: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
-      len: [1]
     },
     gender: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.ENUM('Male', 'Female'),
       allowNull: false,
-      len: [1]
+      isIn: [['Male', 'Female']],
     },
     address1: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
-      len: [1]
     },
     address2: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
-      len: [1]
     },
     city: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
-      len: [1]
     },
     state: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
-      len: [1]
     },
     zip: {
-      type: DataTypes.TEXT,
+      type: DataTypes.INTEGER,
       allowNull: false,
-      len: [1]
     },
     userName: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
-      len: [1]
     },
     password: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
-      len: [1]
+    },
+     skills: {
+      type: DataTypes.STRING,
+      allowNull: false,
     }
 
   });
