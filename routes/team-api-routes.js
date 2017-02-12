@@ -2,12 +2,10 @@ var db = require("../models");
 
 module.exports = function(app) {
 
-	console.log(db.Admin);
+	app.post("/api/addteam", function(req, res) {
 
-	app.get("/api/team", function(req, res) {
-
-		db.Admin.findAll({}).then(function(dbAdmin) {
-			res.json(dbAdmin);
+		db.Admin.create(req.body).then(function(dbAdmin) {
+			res.redirect("/team");
 		});
 	});
 }
