@@ -5,6 +5,7 @@
 // Dependencies
 // =============================================================
 var path = require("path");
+var db = require("../models")
 
 // Routes
 // =============================================================
@@ -12,7 +13,25 @@ module.exports = function(app) {
 
 	app.get("/", function(req, res) {
 
-		res.render("home");
+		db.Admin.findAll({}).then(function(dbAdmin) {
+			
+			var data = [];
+
+			for (i = 0; i < dbAdmin.length; i++) {
+
+				var input = dbAdmin[i].dataValues;
+
+				data.push(input);
+			}
+
+			var hbsObject = {
+				admins: data
+			}
+
+			console.log(hbsObject);
+			res.render("home", hbsObject);
+
+		});
 	});
 
 	app.get("/home", function(req, res) {
@@ -22,6 +41,24 @@ module.exports = function(app) {
 
 	app.get("/team", function(req, res) {
 
-		res.render("team");
+		db.Admin.findAll({}).then(function(dbAdmin) {
+			
+			var data = [];
+
+			for (i = 0; i < dbAdmin.length; i++) {
+
+				var input = dbAdmin[i].dataValues;
+
+				data.push(input);
+			}
+
+			var hbsObject = {
+				admins: data
+			}
+
+			console.log(hbsObject);
+			res.render("team", hbsObject);
+
+		});
 	});
 };

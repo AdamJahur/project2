@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
 
-	var Admin = sequelize.define("Admins", {
+	var Admin = sequelize.define("Admin", {
 
 		id: {
 			type: DataTypes.INTEGER,
