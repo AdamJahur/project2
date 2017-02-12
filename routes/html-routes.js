@@ -13,27 +13,7 @@ module.exports = function(app) {
 
 	app.get("/", function(req, res) {
 
-		db.Admin.findAll({}).then(function(dbAdmin) {
-			
-			var data = [];
-
-			console.log(dbAdmin);
-
-			for (i = 0; i < dbAdmin.length; i++) {
-
-				var input = dbAdmin[i].dataValues;
-
-				data.push(input);
-			}
-
-			var hbsObject = {
-				admins: data
-			}
-
-			console.log(hbsObject);
-			res.render("home", hbsObject);
-
-		});
+		res.render("home");
 	});
 
 	app.get("/home", function(req, res) {
