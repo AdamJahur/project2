@@ -5,6 +5,7 @@
 // Dependencies
 // =============================================================
 var path = require("path");
+var db = require("../models");
 
 // Routes
 // =============================================================
@@ -26,7 +27,7 @@ module.exports = function(app) {
 	});
 
 	app.get("/veteran", function(req, res) {
-			db.Veterans.findall({}).then(function(dbVeterans){
+			db.Veteran.findAll({}).then(function(dbVeterans){
 				var data = [];
 
 				console.log(dbVeterans);
@@ -41,10 +42,10 @@ module.exports = function(app) {
 				}
 
 				console.log(hbsObject);
-				res.render("/veteran", hbsObject);
+				res.render("vetTable", hbsObject);
 
 
 			});
-		res.render("vetTable");
+	
 	});
 };
