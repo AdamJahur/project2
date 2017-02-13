@@ -48,4 +48,9 @@ module.exports = function(app) {
 
 		res.render("vethtml", {layout: 'main'})
 	});
+
+	app.get("/employer", function(req, res) {
+		res.render("employer", {layout: "user"});
+	});
+
 };

@@ -9,15 +9,12 @@ module.exports = function(sequelize, DataTypes) {
 		},
 		companyName: {
 			type: DataTypes.STRING,
-			allowNull: false
 		},
 		firstName: {
-			type: DataTypes.STRING,
-			allowNull: false
+			type: DataTypes.STRING, 
 		},
 		lastName: {
 			type: DataTypes.STRING,
-			allowNull: false
 		},
 		phoneNumber: {
 			type: DataTypes.STRING,
@@ -25,26 +22,21 @@ module.exports = function(sequelize, DataTypes) {
 		},
 		email: {
 			type: DataTypes.STRING,
-			allowNull: false,
-			validate: {
-				isEmail: true
-			}
+			// validate: {
+			// 	isEmail: true
+			// }
 		},
 		address1: {
 			type: DataTypes.STRING,
-			allowNull: false
 		},
 		city: {
 			type: DataTypes.STRING,
-			allowNull: false
 		},
 		state: {
 			type: DataTypes.STRING,
-			allowNull: false
 		},
 		zip: {
 			type: DataTypes.INTEGER,
-			allowNull: false,
 			validate: {
 				len: [5]
 			}
