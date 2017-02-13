@@ -73,4 +73,38 @@ module.exports = function(app) {
 		res.render("employer", {layout: "user"});
 	});
 
+
+
+
+app.get("/veteran", function(req, res) {
+			db.Veteran.findAll({}).then(function(dbVeterans){
+				var data = [];
+
+				console.log(dbVeterans);
+
+				for (var i = 0; i < dbVeterans.length; i++) {
+					var input = dbVeterans[i].dataValues;
+					data.push(input);
+				}
+
+					var hbsObject = {
+					veterans: data
+				}
+
+				console.log(hbsObject);
+				res.render("vetTable", hbsObject);
+
+
+			});
+	
+	});
+
+
+
+
+
+
+
+
+
 };

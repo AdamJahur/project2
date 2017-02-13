@@ -38,7 +38,7 @@ module.exports = function(sequelize, DataTypes) {
     state: {
       type: DataTypes.STRING,
     },
-    zip: {
+     zip: {
       type: DataTypes.INTEGER,
       validate: {
         len: [5]
@@ -52,6 +52,7 @@ module.exports = function(sequelize, DataTypes) {
     },
      skills: {
       type: DataTypes.STRING,
+    }
     }
 
   });
