@@ -1,77 +1,58 @@
 module.exports = function(sequelize, DataTypes) {
+  
   var Veteran = sequelize.define("Veteran", {
+
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true
   },
     rank: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      len: [1]
+      type: DataTypes.STRING,
     },
     firstName: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      len: [1]
+      type: DataTypes.STRING,
     },
     LastName: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      len: [1]
+      type: DataTypes.STRING,
     },
     email: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      len: [1]
+      type: DataTypes.STRING,
     },
     phoneNumber: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      len: [1]
+      type: DataTypes.STRING,
     },
     gender: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      len: [1]
+      type: DataTypes.ENUM('Male', 'Female'),
+      isIn: [['Male', 'Female']],
     },
     address1: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      len: [1]
+      type: DataTypes.STRING,
     },
     address2: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      len: [1]
+      type: DataTypes.STRING,
     },
     city: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      len: [1]
+      type: DataTypes.STRING,
     },
     state: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      len: [1]
+      type: DataTypes.STRING,
     },
-    zip: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      len: [1]
+     zip: {
+      type: DataTypes.INTEGER,
+      validate: {
+        len: [5]
+      }
     },
     userName: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      len: [1]
+      type: DataTypes.STRING,
     },
     password: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      len: [1]
+      type: DataTypes.STRING,
     },
-    {
-      timestamps: false
+     skills: {
+      type: DataTypes.STRING,
+    }
     }
 
   });
