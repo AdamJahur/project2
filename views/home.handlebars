@@ -1,3 +1,17 @@
-<h2>Home</h2>
+<h1>Admin Data</h1>
 
-<h2>Testing</h2>
+<ul>
+	
+	{{#each admins}}
+
+		<li>
+			
+			{{this.name}}
+			{{this.email}}
+			{{this.bio}}
+
+		</li>
+
+	{{/each}}
+
+</ul>
