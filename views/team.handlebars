@@ -8,20 +8,76 @@
 
 <div class="row">
 
-	{{#each admins}}
+<div class="row">
+    
+    <div class="col-sm-12">
+        
+        <button class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-lg" style="float: right">Add Team Member</button>
 
+        <!--  Team Member Modal -->
+        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myLargeModalLabel">Add Team Member</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="container">
+                          <div class="row">
+
+                                <form id="team-form" class="form-horizontal" role="form">
+
+                                    <div class="form-group">
+
+                                        <label for="name" class="col-md-1 control-label">Name</label>
+                                        <div class="col-md-10">
+                                            <input type="name" class="form-control" id="name" placeholder="Name">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="name" class="col-md-1 control-label">Email</label>
+                                        <div class="col-md-10">
+                                            <input type="email" class="form-control" id="email" placeholder="Email">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="name" class="col-md-1 control-label">Bio</label>
+                                        <div class="col-md-10">
+                                            <textarea name="bio" id="bio" cols="30" rows="10" class="form-control"></textarea>
+                                        </div>
+
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div class="col-md-1"></div>
+
+                                        <div class="col-md-10">                                            
+                                            <button type="submit" class="btn btn-success">Submit</button>
+                                        </div>
+                                    </div>
+                              </form>
+                          </div>
+                      </div>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+<br>
+
+<div class="row">
+    {{#each admins}}
     <div class="col-md-4">
 		<div class="text-center card-box">
-            <div class="dropdown pull-right">
-                <a href="#" class="dropdown-toggle card-drop" data-toggle="dropdown" aria-expanded="false">
-                    <h3 class="m-0 text-muted"><i class="mdi mdi-dots-horizontal"></i></h3>
-                </a>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Edit</a></li>
-                    <li><a href="#">Delete</a></li>
-                    <li><a href="#">Block</a></li>
-                </ul>
-            </div>
+
             <div class="clearfix"></div>
             <div class="member-card">
 
@@ -35,7 +91,9 @@
                 </p>
 
                 <button type="button" class="btn btn-default btn-sm m-t-10">Message</button>
-    			<button type="button" class="btn btn-default btn-sm m-t-10">View Profile</button>
+
+                <a href="/profile/{{this.id}}">
+    			<button type="button" class="btn btn-default btn-sm m-t-10">View Profile</button></a>
 
                 <ul class="social-links list-inline m-t-30">
                     <li>
@@ -54,8 +112,8 @@
         </div>
 
     </div> <!-- end col -->
-
     {{/each}}
+</div>
 
 </div>
 

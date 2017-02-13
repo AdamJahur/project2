@@ -9,16 +9,19 @@ module.exports = function(sequelize, DataTypes) {
 		},
 		name: {
 			type: DataTypes.STRING,
-			allowNull: false
 		},
 		email: {
 			type: DataTypes.STRING,
-			allowNull: false
 		},
 		bio: {
 			type: DataTypes.STRING,
-			allowNull: false
 		},
+		username: {
+			type: DataTypes.STRING,
+		},
+		password: {
+			type: DataTypes.STRING,
+		}
 	}, {
 		timestamps: false
 	});

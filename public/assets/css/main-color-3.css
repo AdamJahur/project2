@@ -1,0 +1,59 @@
+/*
+
+[Core Stylesheet]
+
+Project: PopForms - Material Design Modal Forms
+Version: 1.1
+Author : themelooks.com
+
+*/
+
+/*------------------------------------*\
+    COLOR
+\*------------------------------------*/
+#topNav2 a.navbar-brand span,
+.loginForm .mdl-card__actions a,
+.signupForm .mdl-card__actions a,
+.forgotForm .mdl-card__actions a {
+    color: #FF9800;
+}
+
+/*------------------------------------*\
+    BACKGROUND COLOR
+\*------------------------------------*/
+#topNav2 .navbar-brand img,
+.banner-content a.mdl-button.mdl-button--accent,
+.loginForm .mdl-card__title .modal--logo,
+.signupForm .mdl-card__title .modal--logo,
+.forgotForm .mdl-card__title .modal--logo,
+.subscribeForm .mdl-card__title .modal--logo,
+.contactForm .mdl-card__title .modal--logo,
+.login-form-submit-btn.mdl-button.mdl-button--accent,
+.singup-form-submit-btn.mdl-button.mdl-button--accent,
+.forgot-form-submit-btn.mdl-button.mdl-button--accent,
+.subscribe-form-submit-btn.mdl-button.mdl-button--accent,
+.contact-form-submit-btn.mdl-button.mdl-button--accent,
+#loginForm input + label:after,
+#signupForm input + label:after,
+#forgotForm input + label:after,
+#subscribeForm input + label:after,
+#contactForm input + label:after,
+#contactForm textarea + label:after,
+#loginForm input.valid + label:after,
+#signupForm input.valid + label:after,
+#forgotForm input.valid + label:after,
+#subscribeForm input.valid + label:after,
+#contactForm input.valid + label:after,
+#contactForm textarea.valid + label:after,
+#open-switcher,
+#close-switcher {
+    background-color: #FF9800;
+}
+
+/*------------------------------------*\
+    BORDER COLOR
+\*------------------------------------*/
+#open-switcher,
+#close-switcher {
+    border-color: #FF9800;
+}
