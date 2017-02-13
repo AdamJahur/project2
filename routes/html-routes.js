@@ -69,4 +69,8 @@ module.exports = function(app) {
 		})
 	})
 
+	app.get("/employer", function(req, res) {
+		res.render("employer", {layout: "user"});
+	});
+
 };
