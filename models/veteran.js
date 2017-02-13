@@ -52,7 +52,7 @@ module.exports = function(sequelize, DataTypes) {
     },
      skills: {
       type: DataTypes.STRING,
-    }
+    
     }
 
   });
