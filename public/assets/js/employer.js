@@ -10,7 +10,7 @@ $(document).ready(function() {
   var posts;
 
   // This function grabs posts from the database and updates the view
-  function getPosts(category) {
+  function getData(category) {
     var categoryString = category || "";
     if (categoryString) {
       categoryString = "/category/" + categoryString;
@@ -27,3 +27,8 @@ $(document).ready(function() {
     });
   }
 })
+
+getData();
+
+#id
+.class
