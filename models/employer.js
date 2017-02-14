@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
 
-	var Employer = sequelize.define("Employers", {
+	var Employer = sequelize.define("Employer", {
 
 		id: {
 			type: DataTypes.INTEGER,
@@ -22,9 +22,6 @@ module.exports = function(sequelize, DataTypes) {
 		},
 		email: {
 			type: DataTypes.STRING,
-			// validate: {
-			// 	isEmail: true
-			// }
 		},
 		address1: {
 			type: DataTypes.STRING,
@@ -39,9 +36,18 @@ module.exports = function(sequelize, DataTypes) {
 			type: DataTypes.INTEGER,
 			validate: {
 				len: [5]
-			}
-		}
+			},
+		},
+		userName: {
+     	 type: DataTypes.STRING,
+    	},
+   		 password: {
+      type: DataTypes.STRING,
+    	}
+
+	}, {
+		timestamp: false
 	});
 
 	return Employer;
-}
+};

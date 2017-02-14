@@ -43,11 +43,6 @@ module.exports = function(app) {
 		});
 	});
 
-	app.get("/vetHome", function(req, res) {
-
-		res.render("vethtml", {layout: 'main'})
-	});
-
 	app.get("/profile/:id", function(req, res) {
 
 		console.log("Profile ID: ", req.params.id);
@@ -69,10 +64,17 @@ module.exports = function(app) {
 		})
 	})
 
+	app.get("/employer/:id", function(req, res) {
+		db.Employer.findOne({where: {userName: req.params.id}}).then(function(dbEmployer){
 
+				console.log(dbEmployer);
 
-
-
+				var hbsObject = {
+					employer: dbEmployer
+				}
+				res.render("employer", hbsObject);
+			})
+		});
 
 app.get("/veteran", function(req, res) {
 			db.Veteran.findAll({}).then(function(dbVeterans){
@@ -96,33 +98,5 @@ app.get("/veteran", function(req, res) {
 			});
 	
 	});
-
-
-app.get("/employer", function(req, res) {
-			db.Employer.findAll({}).then(function(dbEmployer){
-				var data = [];
-
-				console.log(dbEmployer);
-
-				for (var i = 0; i < dbEmployer.length; i++) {
-					var input = dbEmployer[i].dataValues;
-					data.push(input);
-				}
-
-					var hbsObject = {
-					veterans: data
-				}
-
-				console.log(hbsObject);
-				res.render("jobs", hbsObject);
-
-
-			});
-	
-	});
-
-
-
-
 
 };
