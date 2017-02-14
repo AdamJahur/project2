@@ -1,0 +1,126 @@
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="p-0 text-center">
+            <div class="member-card">
+                <div class="thumb-xl member-thumb m-b-10 center-block">
+                    <img src="../assets/images/logo/{{logo}}" class="img-thumbnail" alt="logo-image">
+                </div>
+
+                <div class="">
+                    <h4 class="m-b-5">{{companyName}}</h4>
+                    <p class="text-muted">{{website}}</p>
+                </div>
+
+                <p class="text-muted m-t-10">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed venenatis orci, sit amet efficitur urna. Nunc at est euismod, tempus ex eget, tristique metus. Sed porta lectus in volutpat placerat. Quisque quis quam ligula. Proin vestibulum malesuada nibh sed tristique. In posuere nisi et nibh bibendum laoreet. Curabitur at tortor et ex porttitor imperdiet.
+                </p>    
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="row">
+    <div class="col-md-4">
+        <!-- Contact-Information -->
+        <div class="panel panel-default panel-fill">
+            <div class="panel-heading">
+                <h3 class="panel-title">Contact Information</h3>
+            </div>
+            <div class="panel-body">
+                <div class="m-b-20">
+                    <strong>Full Name</strong>
+                    <br>
+                    <p class="text-muted">{{firstName}} {{lastName}}</p>
+                </div>
+                <div class="m-b-20">
+                    <strong>Mobile</strong>
+                    <br>
+                    <p class="text-muted">{{phoneNumber}}</p>
+                </div>
+                <div class="m-b-20">
+                    <strong>Email</strong>
+                    <br>
+                    <p class="text-muted">{{email}}</p>
+                </div>
+                <div class="about-info-p m-b-0">
+                    <strong>Location</strong>
+                    <br>
+
+                    <p class="text-muted">{{address1}}</p>
+                    <p class="text-muted">{{city}}, {{state}} {{zip}}</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <!-- Personal-Information -->
+        <div class="panel panel-default panel-fill">
+            <div class="panel-heading">
+                <h3 class="panel-title">Employer Matches</h3>
+            </div>
+            <div class="panel-body">
+
+                <button class="btn btn-primary " data-toggle="modal" data-target="#myModal">Company 1</button><br><br>
+
+                <p>Matching Skills- Research, Office, Typing skills.</p>
+
+                <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                    <div class="modal-dialog">
+
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+
+                                <h4 class="modal-title" id="myModalLabel">Information</h4>
+                            </div>
+
+                            <div class="modal-body">
+
+                                <p><strong>Comapany Name</strong>
+                                    <br>
+                                    <p class="text-muted">Company Name</p>
+                                </div>
+                                <div class="m-b-20">
+                                    <strong>Office Number</strong>
+                                    <br>
+                                    <p class="text-muted">(123) 123 1234</p>
+                                </div>
+                                <div class="m-b-20">
+                                    <strong>Email</strong>
+                                    <br>
+                                    <p class="text-muted">Comapany1@domain.com</p>
+                                </div>
+                                <div class="about-info-p m-b-0">
+                                    <strong>Location</strong>
+                                    <br>
+                                    <p class="text-muted">USA</p></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
+
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+                    <br><br>
+                </div>
+
+                <div class="panel-heading">
+                    <h3 class="panel-title">Job Postings</h3>
+                </div>
+                <div class="panel-body">
+
+                    <button type="button" class="btn btn-success" style="float: right">Add Job Posting</button>
+
+                </div>
+            </div>
+        </div>
+    </div>

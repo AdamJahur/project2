@@ -100,30 +100,61 @@ module.exports = function(app) {
 
 		}).then(function(dbEmployer){
 
-				var values = dbEmployer.dataValues;
+			var values = dbEmployer.dataValues;
 
-				var hbsObject = {
-					companyName: values.companyName,
-					website: values.website,
-					phoneNumber: values.phoneNumber,
-					firstName: values.firstName,
-					lastName: values.lastName,
-					email: values.email,
-					address1: values.address1,
-					city: values.city,
-					state: values.state,
-					zip: values.zip,
-					logo: values.logo
-				}
+			var hbsObject = {
+				companyName: values.companyName,
+				website: values.website,
+				phoneNumber: values.phoneNumber,
+				firstName: values.firstName,
+				lastName: values.lastName,
+				email: values.email,
+				address1: values.address1,
+				city: values.city,
+				state: values.state,
+				zip: values.zip,
+				logo: values.logo
+			}
 
-				res.render("employer", hbsObject);
-			})
-		});
+			console.log(hbsObject);
+			res.render("employer", hbsObject);
+		})
+	});
+	app.get("/Veteran/:id", function(req, res) {
+		
+		console.log("ID:", req.params.id);
+
+		db.Veteran.findOne({
+
+			where: {
+				id: req.params.id
+			}
+
+		}).then(function(dbVeterans){
+
+			var values = dbVeterans.dataValues;
+
+			var hbsObject = {
+				rank: values.rank,
+				firstName: values.firstName,
+				lastName: values.lastName,
+				phoneNumber: values.phoneNumber,
+				email: values.email,
+				address1: values.address1,
+				city: values.city,
+				state: values.state,
+				zip: values.zip,
+			}
+
+			console.log(hbsObject);
+			res.render("veteran", hbsObject);
+		})
+	});
 
 	app.get("/veteran", function(req, res) {
 
-			db.Veteran.findAll({}).then(function(dbVeterans){
-				var data = [];
+		db.Veteran.findAll({}).then(function(dbVeterans){
+			var data = [];
 
 				//console.log(dbVeterans);
 
@@ -132,16 +163,16 @@ module.exports = function(app) {
 					data.push(input);
 				}
 
-					var hbsObject = {
-						veterans: data
-					}
+				var hbsObject = {
+					veterans: data
+				}
 
 				//console.log(hbsObject);
 				res.render("vetTable", hbsObject);
 
 
 			});
-	
+
 	});
 
 
@@ -152,17 +183,17 @@ module.exports = function(app) {
 			
 			var data = [];
 
-				for (var i = 0; i < dbEmployer.length; i++) {
+			for (var i = 0; i < dbEmployer.length; i++) {
 
-					var input = dbEmployer[i].dataValues;
+				var input = dbEmployer[i].dataValues;
 
-					data.push(input);
-				}
-					var hbsObject = {
-					employer: data
-				}
+				data.push(input);
+			}
+			var hbsObject = {
+				employer: data
+			}
 
-				res.render("jobs", hbsObject);
-			});
+			res.render("jobs", hbsObject);
+		});
 	});
 };
