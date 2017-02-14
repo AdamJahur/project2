@@ -69,9 +69,7 @@ module.exports = function(app) {
 		})
 	})
 
-	app.get("/employer", function(req, res) {
-		res.render("employer", {layout: "user"});
-	});
+
 
 
 
@@ -100,8 +98,28 @@ app.get("/veteran", function(req, res) {
 	});
 
 
+app.get("/employer", function(req, res) {
+			db.Employer.findAll({}).then(function(dbEmployer){
+				var data = [];
+
+				console.log(dbEmployer);
+
+				for (var i = 0; i < dbEmployer.length; i++) {
+					var input = dbEmployer[i].dataValues;
+					data.push(input);
+				}
+
+					var hbsObject = {
+					veterans: data
+				}
+
+				console.log(hbsObject);
+				res.render("jobs", hbsObject);
 
 
+			});
+	
+	});
 
 
 
