@@ -99,5 +99,4 @@ app.get("/veteran", function(req, res) {
 	
 	});
 
-
 };
