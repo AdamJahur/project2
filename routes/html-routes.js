@@ -13,10 +13,12 @@ module.exports = function(app) {
 
 	app.get("/", function(req, res) {
 
-		res.render("home");
+		res.redirect("/home");
 	});
 
 	app.get("/home", function(req, res) {
+
+		console.log("Testing");
 
 		res.render("home");
 	});
@@ -120,6 +122,7 @@ module.exports = function(app) {
 			res.render("employer", hbsObject);
 		})
 	});
+
 	app.get("/Veteran/:id", function(req, res) {
 		
 		console.log("ID:", req.params.id);

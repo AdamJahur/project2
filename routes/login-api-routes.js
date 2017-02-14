@@ -13,6 +13,8 @@ module.exports = function(app) {
 		var emailInput = req.body.email;
 		var passwordInput = req.body.password;
 
+		
+
 		if (passwordInput) {
 
 			db.Admin.findOne({
@@ -23,9 +25,9 @@ module.exports = function(app) {
 
 				var passwordAdmin = dbAdmin.dataValues.password;
 
-				if (passwordInput === passwordAdmin) {
+				var user = dbAdmin.dataValues.name;
 
-					console.log("True");
+				if (passwordInput === passwordAdmin) {
 
 					res.redirect("/");
 
