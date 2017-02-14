@@ -36,13 +36,6 @@ module.exports = function(sequelize, DataTypes) {
 			type: DataTypes.INTEGER,
 			validate: {
 				len: [5]
-<<<<<<< HEAD:models/employers.js
-			}
-		}
-	},{
-		timestamps: false
-});
-=======
 			},
 		},
 		userName: {
@@ -55,7 +48,6 @@ module.exports = function(sequelize, DataTypes) {
 	}, {
 		timestamp: false
 	});
->>>>>>> master:models/employer.js
 
 	return Employer;
 };

@@ -22,9 +22,10 @@ $(document).ready(function() {
 				
 				console.log("True");
 
-				$.get("/home", function() {
+				$.get("/", function(data) {
 
-				})
+				});
+
 			} else {
 				console.log("False");
 			}

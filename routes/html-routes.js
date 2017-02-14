@@ -78,7 +78,7 @@ module.exports = function(app) {
 
 app.get("/veteran", function(req, res) {
 
-			db.military_connect.findAll({}).then(function(dbVeterans){
+			db.Veteran.findAll({}).then(function(dbVeterans){
 				var data = [];
 
 				//console.log(dbVeterans);
