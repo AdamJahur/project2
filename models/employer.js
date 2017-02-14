@@ -16,9 +16,11 @@ module.exports = function(sequelize, DataTypes) {
 		lastName: {
 			type: DataTypes.STRING,
 		},
+		website: {
+			type: DataTypes.STRING
+		},
 		phoneNumber: {
-			type: DataTypes.STRING,
-			allowNull: false
+			type: DataTypes.STRING
 		},
 		email: {
 			type: DataTypes.STRING,
@@ -36,26 +38,21 @@ module.exports = function(sequelize, DataTypes) {
 			type: DataTypes.INTEGER,
 			validate: {
 				len: [5]
-<<<<<<< HEAD:models/employers.js
-			}
-		}
-	},{
-		timestamps: false
-});
-=======
 			},
 		},
 		userName: {
-     	 type: DataTypes.STRING,
+     	 	type: DataTypes.STRING,
     	},
    		 password: {
-      type: DataTypes.STRING,
+      		type: DataTypes.STRING,
+    	},
+    	logo: {
+    		type: DataTypes.STRING
     	}
 
 	}, {
-		timestamp: false
+		timestamps: false
 	});
->>>>>>> master:models/employer.js
 
 	return Employer;
 };

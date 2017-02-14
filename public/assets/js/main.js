@@ -15,19 +15,19 @@ Author : themelooks.com
 		/* -------------------------------------------------------------------------*
 		 * FORM VALIDATION
 		 * -------------------------------------------------------------------------*/
-		var loginForm = $('#loginForm');
+		// var loginForm = $('#loginForm');
 		
-		if ( loginForm.length ) {
-			loginForm.validate({
-				rules: {
-                    loginUsername: "required",
-					loginPassword: "required"
-				},
-				errorPlacement: function (error, element) {
-					return true;
-				}
-			});
-		}
+		// if ( loginForm.length ) {
+		// 	loginForm.validate({
+		// 		rules: {
+  //                   loginUsername: "required",
+		// 			loginPassword: "required"
+		// 		},
+		// 		errorPlacement: function (error, element) {
+		// 			return true;
+		// 		}
+		// 	});
+		// }
         
         var signupForm = $('#signupForm');
 		
