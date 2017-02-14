@@ -18,9 +18,5 @@ CREATE TABLE `military_connect`.`Veternas` (
   `skills` VARCHAR(45) NULL,
   PRIMARY KEY (`id`));
 
-
-
 Example: Working
 INSERT INTO `military_connect`.`Veternas` (`id`, `rank`, `firstName`, `lastName`, `email`, `phoneNumber`, `gender`, `address1`, `address2`, `city`, `zip`, `userName`, `passWord`, `skills`) VALUES ('1', 'Private', 'John', 'Marcow', 'Jmarcow@example.com', '555-555-5555', 'male', '555 Awesom Ave', 'n/a', 'Orlando', '32811', 'Jmarcow', 'password', 'Farmer');
-
-
