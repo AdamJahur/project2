@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="m-b-20">
+            <h5>Basic Example</h5>
+            <p class="text-muted font-13 m-b-20">
+                For basic styling—light padding and only horizontal dividers—add the base class <code>.table</code> to any <code>&lt;table&gt;</code>.
+            </p>
+
+            <table class="table m-0">
+            	
+            	<thead>
+            	    <tr>
+            	        <th>#</th>
+            	        <th>Company Name</th>
+            	        <th>First Name</th>
+            	        <th>Last Name</th>
+            	    </tr>
+            	</thead>
+            	<tbody>
+            	{{#each employers}}
+            	    <tr>
+            	        <th scope="row">{{this.id}}</th>
+            	        <td><a href="/employer/{{this.id}}">{{this.companyName}}</a></td>
+            	        <td>{{this.firstName}}</td>
+            	        <td>{{this.lastName}}</td>
+            	    </tr>
+            	{{/each}}
+            	</tbody>
+            </table>
+        </div>
+    </div>
+</div>
