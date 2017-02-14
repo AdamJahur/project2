@@ -30,24 +30,6 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// Set Passport
-var passport = require("passport");
-var LocalStrategy = require("passport-local").Strategy;
-
-passport.use(new LocalStrategy(
-  function(username, password, done) {
-    db.Admin.findOne({ username: username }, function(err, user) {
-      if (err) { return done(err); }
-      if (!user) {
-        return done(null, false, { message: 'Incorrect username.' });
-      }
-      if (!user.validPassword(password)) {
-        return done(null, false, { message: 'Incorrect password.' });
-      }
-      return done(null, user);
-    });
-  }
-));
 // Routes =============================================================
 
 require("./routes/html-routes.js")(app);
