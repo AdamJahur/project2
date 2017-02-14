@@ -21,6 +21,11 @@ module.exports = function(app) {
 		res.render("home");
 	});
 
+	app.get("/error", function(req, res) {
+
+		res.render("error");
+	})
+
 	app.get("/team", function(req, res) {
 
 		db.Admin.findAll({}).then(function(dbAdmin) {

@@ -16,12 +16,12 @@
                             <!--<h4 class="text-uppercase font-bold m-b-0">Sign In</h4>-->
                         </div>
                         <div class="account-content">
-                            <form class="form-horizontal" id="sign-in">
+                            <form method="POST" action="/api/login" class="form-horizontal" id="sign-in">
 
                                 <div class="form-group m-b-20">
                                     <div class="col-xs-12">
                                         <label for="emailaddress">Email address</label>
-                                        <input class="form-control" type="email" id="emailaddress" placeholder="john@deo.com" value="dzimmerman902@gmail.com">
+                                        <input class="form-control" type="email" id="emailaddress" placeholder="john@deo.com" value="dzimmerman902@gmail.com" name="email">
                                     </div>
                                 </div>
 
@@ -29,7 +29,7 @@
                                     <div class="col-xs-12">
                                         <a href="pages-forget-password.html" class="text-muted pull-right font-14">Forgot your password?</a>
                                         <label for="password">Password</label>
-                                        <input class="form-control" type="password" id="password" placeholder="Enter your password" value="">
+                                        <input class="form-control" type="password" id="password" placeholder="Enter your password" value="zimmerman" name="password">
                                     </div>
                                 </div>
 
@@ -46,7 +46,7 @@
 
                                 <div class="form-group account-btn text-center m-t-10">
                                     <div class="col-xs-12">
-                                       <button class="btn btn-lg btn-primary btn-block" id="sign" type="submit">Sign In</button>
+                                        <input class="btn btn-lg btn-primary btn-block" type="submit" value="Sign In">
                                     </div>
                                 </div>
 
