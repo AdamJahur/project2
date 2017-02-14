@@ -62,7 +62,7 @@ module.exports = function(app) {
 
 			res.render("profile", hbsObject)
 		})
-	})
+	});
 
 	app.get("/employer/:id", function(req, res) {
 		db.Employer.findOne({where: {userName: req.params.id}}).then(function(dbEmployer){
@@ -77,10 +77,11 @@ module.exports = function(app) {
 		});
 
 app.get("/veteran", function(req, res) {
-			db.Veteran.findAll({}).then(function(dbVeterans){
+
+			db.military_connect.findAll({}).then(function(dbVeterans){
 				var data = [];
 
-				console.log(dbVeterans);
+				//console.log(dbVeterans);
 
 				for (var i = 0; i < dbVeterans.length; i++) {
 					var input = dbVeterans[i].dataValues;
@@ -88,15 +89,41 @@ app.get("/veteran", function(req, res) {
 				}
 
 					var hbsObject = {
-					veterans: data
-				}
+						veterans: data
+					}
 
-				console.log(hbsObject);
+				//console.log(hbsObject);
 				res.render("vetTable", hbsObject);
 
 
 			});
 	
 	});
+
+
+
+app.get("/jobsTable", function(req, res) {
+			db.Employer.findAll({}).then(function(dbEmployer){
+				var data = [];
+
+				//console.log(dbEmployer);
+
+				for (var i = 0; i < dbEmployer.length; i++) {
+					var input = dbEmployer[i].dataValues;
+					data.push(input);
+				}
+
+					var hbsObject = {
+					employer: data
+				}
+
+				//console.log(hbsObject);
+				res.render("jobs", hbsObject);
+
+
+			});
+	
+	});
+
 
 };
