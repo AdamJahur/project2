@@ -76,6 +76,18 @@ module.exports = function(app) {
 			})
 		});
 
+		app.get("/Veteran/:id", function(req, res) {
+		db.Veteran.findOne({where: {userName: req.params.id}}).then(function(dbVeterans){
+
+				console.log(dbVeterans);
+
+				var hbsObject = {
+					Veteran: dbVeterans
+				}
+				res.render("veteran", hbsObject);
+			})
+		});
+
 app.get("/veteran", function(req, res) {
 			db.Veteran.findAll({}).then(function(dbVeterans){
 				var data = [];
