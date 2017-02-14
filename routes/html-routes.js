@@ -62,20 +62,62 @@ module.exports = function(app) {
 
 			res.render("profile", hbsObject)
 		})
+	});
+
+	app.get("/employer", function(req, res) {
+
+		db.Employer.findAll({}).then(function(dbEmployer) {
+
+			var data = [];
+
+			for (i = 0; i < dbEmployer.length; i++) {
+
+				var input = dbEmployer[i].dataValues;
+
+				data.push(input);
+			}
+
+			var hbsObject = {
+				employers: data
+			}
+
+			res.render("empTable", hbsObject);
+		})
 	})
 
 	app.get("/employer/:id", function(req, res) {
-		db.Employer.findOne({where: {userName: req.params.id}}).then(function(dbEmployer){
+		
+		console.log("ID:", req.params.id);
 
-				console.log(dbEmployer);
+
+		db.Employer.findOne({
+
+			where: {
+				id: req.params.id
+			}
+
+		}).then(function(dbEmployer){
+
+				var values = dbEmployer.dataValues;
 
 				var hbsObject = {
-					employer: dbEmployer
+					companyName: values.companyName,
+					website: values.website,
+					phoneNumber: values.phoneNumber,
+					firstName: values.firstName,
+					lastName: values.lastName,
+					email: values.email,
+					address1: values.address1,
+					city: values.city,
+					state: values.state,
+					zip: values.zip,
+					logo: values.logo
 				}
+
+				console.log(hbsObject);
 				res.render("employer", hbsObject);
 			})
 		});
-
 		app.get("/Veteran/:id", function(req, res) {
 		db.Veteran.findOne({where: {userName: req.params.id}}).then(function(dbVeterans){
 
@@ -89,10 +131,11 @@ module.exports = function(app) {
 		});
 
 app.get("/veteran", function(req, res) {
+
 			db.Veteran.findAll({}).then(function(dbVeterans){
 				var data = [];
 
-				console.log(dbVeterans);
+				//console.log(dbVeterans);
 
 				for (var i = 0; i < dbVeterans.length; i++) {
 					var input = dbVeterans[i].dataValues;
@@ -100,10 +143,10 @@ app.get("/veteran", function(req, res) {
 				}
 
 					var hbsObject = {
-					veterans: data
-				}
+						veterans: data
+					}
 
-				console.log(hbsObject);
+				//console.log(hbsObject);
 				res.render("vetTable", hbsObject);
 
 
@@ -111,4 +154,25 @@ app.get("/veteran", function(req, res) {
 	
 	});
 
+
+
+	app.get("/jobsTable", function(req, res) {
+
+		db.Employer.findAll({}).then(function(dbEmployer){
+			
+			var data = [];
+
+				for (var i = 0; i < dbEmployer.length; i++) {
+
+					var input = dbEmployer[i].dataValues;
+
+					data.push(input);
+				}
+					var hbsObject = {
+					employer: data
+				}
+
+				res.render("jobs", hbsObject);
+			});
+	});
 };

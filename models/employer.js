@@ -16,9 +16,11 @@ module.exports = function(sequelize, DataTypes) {
 		lastName: {
 			type: DataTypes.STRING,
 		},
+		website: {
+			type: DataTypes.STRING
+		},
 		phoneNumber: {
-			type: DataTypes.STRING,
-			allowNull: false
+			type: DataTypes.STRING
 		},
 		email: {
 			type: DataTypes.STRING,
@@ -39,14 +41,17 @@ module.exports = function(sequelize, DataTypes) {
 			},
 		},
 		userName: {
-     	 type: DataTypes.STRING,
+     	 	type: DataTypes.STRING,
     	},
    		 password: {
-      type: DataTypes.STRING,
+      		type: DataTypes.STRING,
+    	},
+    	logo: {
+    		type: DataTypes.STRING
     	}
 
 	}, {
-		timestamp: false
+		timestamps: false
 	});
 
 	return Employer;
