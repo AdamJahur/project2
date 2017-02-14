@@ -26,7 +26,7 @@ module.exports = function(app) {
 				bio: dbAdmin.dataValues.bio,
 			};
 
-			// res.render("home", hbsObject)
+			res.render("home", hbsObject)
 		});
 	}); 
 }
