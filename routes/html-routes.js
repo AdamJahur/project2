@@ -23,8 +23,8 @@ module.exports = function(app) {
 
 	app.get("/error", function(req, res) {
 
-		res.render("error");
-	})
+		res.render("loginError", {layout: "empty"});
+	});
 
 	app.get("/team", function(req, res) {
 

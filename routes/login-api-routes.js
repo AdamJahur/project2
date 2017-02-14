@@ -27,7 +27,7 @@ module.exports = function(app) {
 
 					console.log("True");
 
-					res.redirect("/team");
+					res.redirect("/home");
 
 				} else {
 
