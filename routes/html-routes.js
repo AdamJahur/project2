@@ -87,9 +87,6 @@ module.exports = function(app) {
 
 	app.get("/employer/:id", function(req, res) {
 		
-		console.log("ID:", req.params.id);
-
-
 		db.Employer.findOne({
 
 			where: {
@@ -114,7 +111,6 @@ module.exports = function(app) {
 					logo: values.logo
 				}
 
-				console.log(hbsObject);
 				res.render("employer", hbsObject);
 			})
 		});
