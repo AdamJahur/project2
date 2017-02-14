@@ -22,9 +22,6 @@ module.exports = function(sequelize, DataTypes) {
 		},
 		email: {
 			type: DataTypes.STRING,
-			// validate: {
-			// 	isEmail: true
-			// }
 		},
 		address1: {
 			type: DataTypes.STRING,
@@ -39,11 +36,26 @@ module.exports = function(sequelize, DataTypes) {
 			type: DataTypes.INTEGER,
 			validate: {
 				len: [5]
+<<<<<<< HEAD:models/employers.js
 			}
 		}
 	},{
 		timestamps: false
 });
+=======
+			},
+		},
+		userName: {
+     	 type: DataTypes.STRING,
+    	},
+   		 password: {
+      type: DataTypes.STRING,
+    	}
+
+	}, {
+		timestamp: false
+	});
+>>>>>>> master:models/employer.js
 
 	return Employer;
-}
+};

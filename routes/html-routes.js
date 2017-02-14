@@ -43,11 +43,6 @@ module.exports = function(app) {
 		});
 	});
 
-	app.get("/vetHome", function(req, res) {
-
-		res.render("vethtml", {layout: 'main'})
-	});
-
 	app.get("/profile/:id", function(req, res) {
 
 		console.log("Profile ID: ", req.params.id);
@@ -69,13 +64,21 @@ module.exports = function(app) {
 		})
 	});
 
+	app.get("/employer/:id", function(req, res) {
+		db.Employer.findOne({where: {userName: req.params.id}}).then(function(dbEmployer){
 
+				console.log(dbEmployer);
 
-
-
+				var hbsObject = {
+					employer: dbEmployer
+				}
+				res.render("employer", hbsObject);
+			})
+		});
 
 app.get("/veteran", function(req, res) {
-			db.Veteran.findAll({}).then(function(dbVeterans){
+
+			db.military_connect.findAll({}).then(function(dbVeterans){
 				var data = [];
 
 				//console.log(dbVeterans);
@@ -86,8 +89,8 @@ app.get("/veteran", function(req, res) {
 				}
 
 					var hbsObject = {
-					veterans: data
-				}
+						veterans: data
+					}
 
 				//console.log(hbsObject);
 				res.render("vetTable", hbsObject);
@@ -96,9 +99,6 @@ app.get("/veteran", function(req, res) {
 			});
 	
 	});
-
-
-
 
 
 
@@ -124,7 +124,6 @@ app.get("/jobsTable", function(req, res) {
 			});
 	
 	});
-
 
 
 };
