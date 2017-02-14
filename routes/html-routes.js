@@ -67,7 +67,7 @@ module.exports = function(app) {
 
 			res.render("profile", hbsObject)
 		})
-	})
+	});
 
 
 
@@ -78,7 +78,7 @@ app.get("/veteran", function(req, res) {
 			db.Veteran.findAll({}).then(function(dbVeterans){
 				var data = [];
 
-				console.log(dbVeterans);
+				//console.log(dbVeterans);
 
 				for (var i = 0; i < dbVeterans.length; i++) {
 					var input = dbVeterans[i].dataValues;
@@ -89,7 +89,7 @@ app.get("/veteran", function(req, res) {
 					veterans: data
 				}
 
-				console.log(hbsObject);
+				//console.log(hbsObject);
 				res.render("vetTable", hbsObject);
 
 
@@ -98,11 +98,15 @@ app.get("/veteran", function(req, res) {
 	});
 
 
-app.get("/employer", function(req, res) {
+
+
+
+
+app.get("/jobsTable", function(req, res) {
 			db.Employer.findAll({}).then(function(dbEmployer){
 				var data = [];
 
-				console.log(dbEmployer);
+				//console.log(dbEmployer);
 
 				for (var i = 0; i < dbEmployer.length; i++) {
 					var input = dbEmployer[i].dataValues;
@@ -110,18 +114,16 @@ app.get("/employer", function(req, res) {
 				}
 
 					var hbsObject = {
-					veterans: data
+					employer: data
 				}
 
-				console.log(hbsObject);
+				//console.log(hbsObject);
 				res.render("jobs", hbsObject);
 
 
 			});
 	
 	});
-
-
 
 
 

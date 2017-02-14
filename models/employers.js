@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
 
-	var Employer = sequelize.define("Employers", {
+	var Employer = sequelize.define("Employer", {
 
 		id: {
 			type: DataTypes.INTEGER,
@@ -41,7 +41,9 @@ module.exports = function(sequelize, DataTypes) {
 				len: [5]
 			}
 		}
-	});
+	},{
+		timestamps: false
+});
 
 	return Employer;
 }
