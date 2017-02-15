@@ -26,13 +26,13 @@
                       <div class="container">
                           <div class="row">
 
-                                <form id="team-form" class="form-horizontal" role="form">
+                                <form method="POST" action="/api/addteam" id="team-form" class="form-horizontal" role="form">
 
                                     <div class="form-group">
 
                                         <label for="name" class="col-md-1 control-label">Name</label>
                                         <div class="col-md-10">
-                                            <input type="name" class="form-control" id="name" placeholder="Name">
+                                            <input name="name" type="name" class="form-control" id="name" placeholder="Name">
                                         </div>
 
                                     </div>
@@ -41,7 +41,7 @@
 
                                         <label for="name" class="col-md-1 control-label">Email</label>
                                         <div class="col-md-10">
-                                            <input type="email" class="form-control" id="email" placeholder="Email">
+                                            <input name="email" type="email" class="form-control" id="email" placeholder="Email">
                                         </div>
 
                                     </div>

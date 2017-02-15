@@ -4,32 +4,32 @@ $(document).ready(function() {
 	var emailInput = $("#email");
 	var bioInput = $("#bio");
 
-	$(document).on("submit", "#team-form", handleTeamForm)
+	// $(document).on("submit", "#team-form", handleTeamForm)
 
-	function handleTeamForm(event) {
+	// function handleTeamForm(event) {
 
-		event.preventDefault();
+	// 	event.preventDefault();
 
-		insertTeam({
-			name: nameInput.val().trim(),
-			email: emailInput.val().trim(),
-			bio: bioInput.val().trim()
-		});
-	}
+	// 	insertTeam({
+	// 		name: nameInput.val().trim(),
+	// 		email: emailInput.val().trim(),
+	// 		bio: bioInput.val().trim()
+	// 	});
+	// }
 
 
-	function insertTeam(teamData) {
-		console.log(teamData);
-		$.post("/api/addteam", teamData)
-	}
+	// function insertTeam(teamData) {
+	// 	console.log(teamData);
+	// 	$.post("/api/addteam", teamData)
+	// }
 
-	var url = window.location.search;
-	var profileId;
+	// var url = window.location.search;
+	// var profileId;
 
-	if (url.indexOf("?profile_id") !== -1) {
-		profileId = url.split("=")[1];
-		profileTeam(profileId);
-	}
+	// if (url.indexOf("?profile_id") !== -1) {
+	// 	profileId = url.split("=")[1];
+	// 	profileTeam(profileId);
+	// }
 
 	function profileTeam(profile) {
 		console.log("Profile ID:", profile);
