@@ -11,14 +11,37 @@ var db = require("../models")
 // =============================================================
 module.exports = function(app) {
 
-	app.get("/", function(req, res) {
+	app.get("/home/:user", function(req, res) {
 
-		res.render("home");
+		var user = req.params.user;
+
+		db.Admin.findOne({
+			where: {
+				username: user
+			}
+		}).then(function(dbAdmin) {
+
+			var data = dbAdmin.dataValues;
+
+			var hbsObject = {
+				name: data.name,
+				email: data.email
+			}
+
+			console.log(hbsObject);
+
+			res.render("home", hbsObject);
+		});
 	});
 
 	app.get("/home", function(req, res) {
 
 		res.render("home");
+	});
+
+	app.get("/error", function(req, res) {
+
+		res.render("loginError", {layout: "empty"});
 	});
 
 	app.get("/team", function(req, res) {
@@ -87,9 +110,6 @@ module.exports = function(app) {
 
 	app.get("/employer/:id", function(req, res) {
 		
-		console.log("ID:", req.params.id);
-
-
 		db.Employer.findOne({
 
 			where: {
@@ -118,10 +138,10 @@ module.exports = function(app) {
 			res.render("employer", hbsObject);
 		})
 	});
+
 	app.get("/Veteran/:id", function(req, res) {
 		
 		console.log("ID:", req.params.id);
-
 
 		db.Veteran.findOne({
 

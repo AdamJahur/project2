@@ -8,18 +8,34 @@ module.exports = function(app) {
 		res.render("login", {layout: "empty"});
 	});
 
-	app.get('/api/login/:email', function(req, res) {
+	app.post('/api/login', function(req, res) {
 
-		var data = req.params.email;
+		var user = req.body.username;
+		var pass = req.body.password;
 
-		console.log(data);
+			db.Admin.findOne({
+				where: {
+					username: user
+				}
+			}).then(function(dbAdmin) {
 
-		db.Admin.findOne({
-			where: {
-				email: data
-			}
-		}).then(function(dbAdmin) {
-			res.json(dbAdmin);
-		})
+				if (dbAdmin === null) {
+
+					res.redirect("/error");
+					return;
+				}
+
+				var password = dbAdmin.dataValues.password;
+
+				if (pass === password) {
+
+					res.redirect("/home/" + user);
+
+				} else {
+
+					res.redirect("/error");
+				}
+				
+			});
 	});
 }

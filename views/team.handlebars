@@ -26,39 +26,57 @@
                       <div class="container">
                           <div class="row">
 
-                                <form id="team-form" class="form-horizontal" role="form">
+                                <form method="POST" action="/api/addteam" id="team-form" class="form-horizontal" role="form">
 
                                     <div class="form-group">
 
-                                        <label for="name" class="col-md-1 control-label">Name</label>
-                                        <div class="col-md-10">
-                                            <input type="name" class="form-control" id="name" placeholder="Name">
+                                        <label for="name" class="col-md-2 control-label">Name</label>
+                                        <div class="col-md-9">
+                                            <input name="name" type="name" class="form-control" id="name" placeholder="Name">
                                         </div>
 
                                     </div>
 
                                     <div class="form-group">
 
-                                        <label for="name" class="col-md-1 control-label">Email</label>
-                                        <div class="col-md-10">
-                                            <input type="email" class="form-control" id="email" placeholder="Email">
+                                        <label for="name" class="col-md-2 control-label">Email Address</label>
+                                        <div class="col-md-9">
+                                            <input name="email" type="email" class="form-control" id="email" placeholder="Email">
                                         </div>
 
                                     </div>
 
                                     <div class="form-group">
 
-                                        <label for="name" class="col-md-1 control-label">Bio</label>
-                                        <div class="col-md-10">
+                                        <label for="name" class="col-md-2 control-label">Username</label>
+                                        <div class="col-md-9">
+                                            <input name="username" type="name" class="form-control" id="name" placeholder="User">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="name" class="col-md-2 control-label">Password</label>
+                                        <div class="col-md-9">
+                                            <input name="password" type="name" class="form-control" id="name" placeholder="Password">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="name" class="col-md-2 control-label">Bio</label>
+                                        <div class="col-md-9">
                                             <textarea name="bio" id="bio" cols="30" rows="10" class="form-control"></textarea>
                                         </div>
 
                                     </div>
                                     
                                     <div class="form-group">
-                                        <div class="col-md-1"></div>
+                                        <div class="col-md-2"></div>
 
-                                        <div class="col-md-10">                                            
+                                        <div class="col-md-9">                                            
                                             <button type="submit" class="btn btn-success">Submit</button>
                                         </div>
                                     </div>
