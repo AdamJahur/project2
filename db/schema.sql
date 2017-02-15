@@ -1,7 +1,7 @@
 CREATE DATABASE Military_Connect;
 USE Military_Connect;
 
-CREATE TABLE Admin
+CREATE TABLE admin
 (
 	id int NOT NULL AUTO_INCREMENT,
 	name varchar(100) NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE Admin
 	PRIMARY KEY (id)
 ); 
 
-CREATE TABLE Employer_Table
+CREATE TABLE employer
 (
 	id int NOT NULL AUTO_INCREMENT,
 	company_name varchar(100) NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE Employer_Table
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE Veteran_Table
+CREATE TABLE veteran
 (
 	id int NOT NULL AUTO_INCREMENT,
 	rank varchar(100) NOT NULL,
@@ -47,7 +47,7 @@ CREATE TABLE Veteran_Table
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE Jobs_Table
+CREATE TABLE jobsTable
 (
 	id int NOT NULL AUTO_INCREMENT,
 	job_title varchar(100) NOT NULL,
