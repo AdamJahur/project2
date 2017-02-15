@@ -215,4 +215,9 @@ module.exports = function(app) {
 			res.render("jobs", hbsObject);
 		});
 	});
+
+	app.get("/signupVet", function(req, res) {
+
+		res.render("signupVet", {layout: "empty"});
+	});
 };
