@@ -18,8 +18,6 @@ module.exports = function(app) {
 
 	app.get("/home", function(req, res) {
 
-		console.log("Testing");
-
 		res.render("home");
 	});
 

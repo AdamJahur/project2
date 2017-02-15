@@ -10,24 +10,26 @@ module.exports = function(app) {
 
 	app.post('/api/login', function(req, res) {
 
-		var emailInput = req.body.email;
-		var passwordInput = req.body.password;
+		var user = req.body.username;
+		var pass = req.body.password;
 
-		
-
-		if (passwordInput) {
+		if (pass || user) {
 
 			db.Admin.findOne({
 				where: {
-					username: emailInput
+					username: user
 				}
 			}).then(function(dbAdmin) {
 
-				var passwordAdmin = dbAdmin.dataValues.password;
+				if (dbAdmin === null) {
 
-				var user = dbAdmin.dataValues.name;
+					res.redirect("/error");
+					return;
+				}
 
-				if (passwordInput === passwordAdmin) {
+				var password = dbAdmin.dataValues.password;
+
+				if (pass === password) {
 
 					res.redirect("/");
 
@@ -40,7 +42,7 @@ module.exports = function(app) {
 
 		} else {
 
-			return console.log("Please enter password");
+			res.redirect("/error");
 		}
 	});
 }

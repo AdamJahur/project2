@@ -6,12 +6,6 @@ module.exports = function(app) {
 
 	app.post("/api/addteam", function(req, res) {
 
-		var object = req.body;
-
-		object.password = req.body.name;
-
-		console.log(object);
-
 		db.Admin.create(req.body).then(function(dbAdmin) {
 			res.redirect("/team");
 		});
