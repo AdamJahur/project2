@@ -13,8 +13,6 @@ module.exports = function(app) {
 		var user = req.body.username;
 		var pass = req.body.password;
 
-		if (pass || user) {
-
 			db.Admin.findOne({
 				where: {
 					username: user
@@ -31,7 +29,7 @@ module.exports = function(app) {
 
 				if (pass === password) {
 
-					res.redirect("/");
+					res.redirect("/home/" + user);
 
 				} else {
 
@@ -39,10 +37,5 @@ module.exports = function(app) {
 				}
 				
 			});
-
-		} else {
-
-			res.redirect("/error");
-		}
 	});
 }

@@ -11,9 +11,27 @@ var db = require("../models")
 // =============================================================
 module.exports = function(app) {
 
-	app.get("/", function(req, res) {
+	app.get("/home/:user", function(req, res) {
 
-		res.redirect("/home");
+		var user = req.params.user;
+
+		db.Admin.findOne({
+			where: {
+				username: user
+			}
+		}).then(function(dbAdmin) {
+
+			var data = dbAdmin.dataValues;
+
+			var hbsObject = {
+				name: data.name,
+				email: data.email
+			}
+
+			console.log(hbsObject);
+
+			res.render("home", hbsObject);
+		});
 	});
 
 	app.get("/home", function(req, res) {
