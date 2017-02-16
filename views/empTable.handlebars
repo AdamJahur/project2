@@ -54,11 +54,13 @@
                                         <tbody>
 
                                           {{#each employers}}
-                                            <tr>
-                                                <th scope="row">{{this.id}}</th>
-                                                <td><a href="/employer/{{this.id}}">{{this.company_name}}</a></td>
-                                                <td>{{this.first_name}}</td>
-                                                <td>{{this.last_name}}</td>
+                                            <tr>      
+
+                                        <th scope="row">{{this.id}}</th>
+                                                <td><a href="/employer/{{this.id}}">{{this.companyName}}</a></td>
+                                                <td>{{this.firstName}} {{this.lastName}}</td>
+                                                
+                                        
                                             </tr>
                                           {{/each}}
 
