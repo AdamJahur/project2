@@ -194,8 +194,6 @@ module.exports = function(app) {
 
 	});
 
-
-
 	app.get("/jobsTable", function(req, res) {
 
 		db.Employer.findAll({}).then(function(dbEmployer){

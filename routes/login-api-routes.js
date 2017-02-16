@@ -13,11 +13,18 @@ module.exports = function(app) {
 		var user = req.body.username;
 		var pass = req.body.password;
 
+		console.log("User: ", user);
+
 			db.Admin.findOne({
 				where: {
 					username: user
-				}
+				}, include: [
+				{
+					model: db.Veteran
+				}]
 			}).then(function(dbAdmin) {
+
+				console.log("Category: ", dbAdmin.dataValues.category);
 
 				if (dbAdmin === null) {
 
