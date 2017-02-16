@@ -6,46 +6,48 @@ module.exports = function(sequelize, DataTypes) {
     type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true
-  },
-    rank: {
+    },
+  rank: {
       type: DataTypes.STRING,
     },
-    firstName: {
+  first_name: {
       type: DataTypes.STRING,
     },
-    LastName: {
+  last_name: {
       type: DataTypes.STRING,
     },
-    email: {
+  phone_number: {
       type: DataTypes.STRING,
     },
-    phoneNumber: {
+  email: {
       type: DataTypes.STRING,
     },
-    address: {
+  address: {
       type: DataTypes.STRING,
     },
-    city: {
+  city: {
       type: DataTypes.STRING,
     },
-    state: {
+  state: {
       type: DataTypes.STRING,
     },
-     zip: {
+  zip: {
       type: DataTypes.INTEGER,
       validate: {
         len: [5]
       }
     },
-     skills: {
-      type: DataTypes.STRING,
-    
-    },
-    userName: {
+  skills: {
       type: DataTypes.STRING,
     },
-    password: {
+  username: {
       type: DataTypes.STRING,
+    },
+  password: {
+      type: DataTypes.STRING,
+    },
+  category: {
+      type: DataTypes.STRING
     }
   }, {
        timestamps: false
