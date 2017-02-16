@@ -35,6 +35,8 @@ app.set("view engine", "handlebars");
 require("./routes/html-routes.js")(app);
 require("./routes/team-api-routes.js")(app);
 require("./routes/login-api-routes.js")(app);
+require("./routes/jobs-api-route.js")(app);
+
 
 // Syncing our sequelize models and then starting our express app
 db.sequelize.sync({ force: false }).then(function() {
