@@ -1,9 +1,5 @@
-
-
-
     <body>
 
-        
                 <div>
 
                     <div class="container">
@@ -46,8 +42,6 @@
                                         </div>
                                     </div>
 
-                                    <h1>Please change data below in code</h1>
-
                                     <table id="datatable" class="table table-striped table-bordered">
                                         <thead>
                                         <tr>
@@ -60,7 +54,7 @@
 
                                         <tbody>                                        
                                             {{#each employer}}
-                                                <td>{{this.companyName}}</td>
+                                                <td><a href="/employer/{{this.id}}">{{this.companyName}}</a>
                                                 <td>{{this.firstName}}</td>
                                                 <td>{{this.email}}</td>
                                             {{/each}}
@@ -71,31 +65,4 @@
                             </div>
                         </div>
 
-                      
-
-
-
-        
-        
-
     </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   
-  var Veteran = sequelize.define("Veteran", {
+  var Veteran = sequelize.define("Veterans", {
 
   id: {
     type: DataTypes.INTEGER,
