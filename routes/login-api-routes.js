@@ -10,14 +10,23 @@ module.exports = function(app) {
 
 	app.post('/api/login', function(req, res) {
 
+		console.log(req.body);
+
 		var user = req.body.username;
 		var pass = req.body.password;
 
-			db.Admin.findOne({
+		console.log("User: ", user);
+
+			db.Admin.findAll({
 				where: {
 					username: user
-				}
+				}, include: [
+				{
+					model: db.Veteran
+				}]
 			}).then(function(dbAdmin) {
+
+				console.log(dbAdmin);
 
 				if (dbAdmin === null) {
 
