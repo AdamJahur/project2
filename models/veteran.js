@@ -22,14 +22,7 @@ module.exports = function(sequelize, DataTypes) {
     phoneNumber: {
       type: DataTypes.STRING,
     },
-    gender: {
-      type: DataTypes.ENUM('Male', 'Female'),
-      isIn: [['Male', 'Female']],
-    },
-    address1: {
-      type: DataTypes.STRING,
-    },
-    address2: {
+    address: {
       type: DataTypes.STRING,
     },
     city: {
@@ -44,17 +37,16 @@ module.exports = function(sequelize, DataTypes) {
         len: [5]
       }
     },
+     skills: {
+      type: DataTypes.STRING,
+    
+    },
     userName: {
       type: DataTypes.STRING,
     },
     password: {
       type: DataTypes.STRING,
-    },
-     skills: {
-      type: DataTypes.STRING,
-    
     }
-
   }, {
        timestamps: false
     });
