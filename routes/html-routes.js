@@ -172,7 +172,7 @@ module.exports = function(app) {
 
 	app.get("/veteran", function(req, res) {
 
-		db.Veteran.findAll({}).then(function(dbVeterans){
+		db.Veterans.findAll({}).then(function(dbVeterans){
 			var data = [];
 
 				//console.log(dbVeterans);
