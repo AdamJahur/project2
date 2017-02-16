@@ -134,14 +134,14 @@ module.exports = function(app) {
 				logo: values.logo
 			}
 
-			console.log(hbsObject);
+			// console.log(hbsObject);
 			res.render("employer", hbsObject);
 		})
 	});
 
 	app.get("/Veteran/:id", function(req, res) {
 		
-		console.log("ID:", req.params.id);
+		// console.log("ID:", req.params.id);
 
 		db.Veteran.findOne({
 
@@ -165,7 +165,7 @@ module.exports = function(app) {
 				zip: values.zip,
 			}
 
-			console.log(hbsObject);
+			// console.log(hbsObject);
 			res.render("veteran", hbsObject);
 		})
 	});
