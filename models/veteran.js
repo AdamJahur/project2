@@ -10,16 +10,16 @@ module.exports = function(sequelize, DataTypes) {
     rank: {
       type: DataTypes.STRING,
     },
-    firstName: {
+    first_name: {
       type: DataTypes.STRING,
     },
-    LastName: {
+    last_name: {
       type: DataTypes.STRING,
     },
     email: {
       type: DataTypes.STRING,
     },
-    phoneNumber: {
+    phone_number: {
       type: DataTypes.STRING,
     },
     address: {
@@ -41,7 +41,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
     
     },
-    userName: {
+    username: {
       type: DataTypes.STRING,
     },
     password: {
