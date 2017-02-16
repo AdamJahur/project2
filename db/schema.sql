@@ -18,6 +18,7 @@ CREATE TABLE employer
 	company_name varchar(100) NOT NULL,
 	first_name varchar(50) NOT NULL,
 	last_name varchar(50) NOT NULL,
+	website varchar(100) NOT NULL,
 	phone_number varchar(15) NOT NULL,
 	email varchar(50) NOT NULL,
 	address varchar(150) NOT NULL,
