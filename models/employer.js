@@ -7,13 +7,13 @@ module.exports = function(sequelize, DataTypes) {
 			autoIncrement: true,
 			primaryKey: true
 		},
-		companyName: {
+		company_name: {
 			type: DataTypes.STRING,
 		},
-		firstName: {
+		first_name: {
 			type: DataTypes.STRING, 
 		},
-		lastName: {
+		last_name: {
 			type: DataTypes.STRING,
 		},
 		website: {
@@ -40,7 +40,7 @@ module.exports = function(sequelize, DataTypes) {
 				len: [5]
 			},
 		},
-		userName: {
+		username: {
      	 	type: DataTypes.STRING,
     	},
    		 password: {
