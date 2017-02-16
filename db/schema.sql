@@ -1,60 +1,61 @@
 CREATE DATABASE Military_Connect;
 USE Military_Connect;
 
-CREATE TABLE admin
+CREATE TABLE admins
 (
 	id int NOT NULL AUTO_INCREMENT,
-	name varchar(100) NOT NULL,
-	email varchar(50) NOT NULL,
-	bio text(400) NOT NULL,
-	username varchar(25) NOT NULL,
-	password char(20) NOT NULL,
+	name varchar(100) NULL,
+	email varchar(50) NULL,
+	bio text(400) NULL,
+	username varchar(25) NULL,
+	password char(20) NULL,
 	PRIMARY KEY (id)
 ); 
 
-CREATE TABLE employer
+CREATE TABLE employers
 (
 	id int NOT NULL AUTO_INCREMENT,
-	company_name varchar(100) NOT NULL,
-	first_name varchar(50) NOT NULL,
-	last_name varchar(50) NOT NULL,
-	website varchar(100) NOT NULL,
-	phone_number varchar(15) NOT NULL,
-	email varchar(50) NOT NULL,
-	address varchar(150) NOT NULL,
-	city varchar(100) NOT NULL,
-	state varchar(50) NOT NULL,
-	zip varchar(7) NOT NULL,
-	username varchar(25) NOT NULL,
-	password char(20) NOT NULL,
+	company_name varchar(100) NULL,
+	first_name varchar(50) NULL,
+	last_name varchar(50) NULL,
+	website varchar(100) NULL,
+	phone_number varchar(15) NULL,
+	email varchar(50) NULL,
+	address varchar(150) NULL,
+	city varchar(100) NULL,
+	state varchar(50) NULL,
+	zip varchar(7) NULL,
+	username varchar(25) NULL,
+	password char(20) NULL,
+	logo varchar(255) NULL,
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE veteran
+CREATE TABLE veterans
 (
 	id int NOT NULL AUTO_INCREMENT,
-	rank varchar(100) NOT NULL,
-	first_name varchar(50) NOT NULL,
-	last_name varchar(50) NOT NULL,
-	phone_number varchar(10) NOT NULL,
-	email varchar(50) NOT NULL,
-	address varchar(150) NOT NULL,
-	city varchar(100) NOT NULL,
-	state varchar(50) NOT NULL,
-	zip varchar(7) NOT NULL,
-	skills text(400) NOT NULL,
-	username varchar(25) NOT NULL,
-	password char(20) NOT NULL,
+	rank varchar(100) NULL,
+	first_name varchar(50) NULL,
+	last_name varchar(50) NULL,
+	phone_number varchar(15) NULL,
+	email varchar(50) NULL,
+	address varchar(150) NULL,
+	city varchar(100) NULL,
+	state varchar(50) NULL,
+	zip varchar(7) NULL,
+	skills text(400) NULL,
+	username varchar(25) NULL,
+	password char(20) NULL,
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE jobsTable
+CREATE TABLE jobs
 (
 	id int NOT NULL AUTO_INCREMENT,
-	job_title varchar(100) NOT NULL,
-	job_description text(500) NOT NULL,
-	skills text(400) NOT NULL,
-	company_name varchar(100) NOT NULL,
+	job_title varchar(100) NULL,
+	job_description text(500) NULL,
+	skills text(400) NULL,
+	company_name varchar(100) NULL,
 	PRIMARY KEY (id)
 );
 

@@ -19,13 +19,13 @@ module.exports = function(sequelize, DataTypes) {
 		website: {
 			type: DataTypes.STRING
 		},
-		phoneNumber: {
+		phone_number: {
 			type: DataTypes.STRING
 		},
 		email: {
 			type: DataTypes.STRING,
 		},
-		address1: {
+		address: {
 			type: DataTypes.STRING,
 		},
 		city: {
