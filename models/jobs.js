@@ -16,6 +16,9 @@ module.exports = function(sequelize, DataTypes) {
 		skills: {
 			type: DataTypes.STRING,
 		},
+		field: {
+			type: DataTypes.STRING,
+		},
 		company_name: {
 			type: DataTypes.STRING
 		},
