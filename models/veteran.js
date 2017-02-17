@@ -7,6 +7,9 @@ module.exports = function(sequelize, DataTypes) {
       autoIncrement: true,
       primaryKey: true
       },
+    photo: {
+      type: DataTypes.STRING,
+    },
     rank: {
         type: DataTypes.STRING,
       },
