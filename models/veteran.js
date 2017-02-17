@@ -50,12 +50,12 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING
       },
     bio: {
-    type: DataTypes.STRING
-  }
-}, 
+      type: DataTypes.STRING
+      }
+    }, 
   {
-       timestamps: false
-    });
+    timestamps: false
+  });
   return Veteran;
 };
 
