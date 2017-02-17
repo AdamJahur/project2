@@ -154,5 +154,30 @@
     <!-- Team Js -->
     <script src="/assets/js/team.js"></script>
 
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Service Branch', 'Number of Veterans'],
+          ['Marines',     1],
+          ['Army',      1],
+          ['Navy',  1],
+          ['Air Force', 1],
+          ['Coast Guard',    1]
+        ]);
+
+        var options = {
+          title: 'Veterans breakdown by branch of service'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
     </body>
 </html>
