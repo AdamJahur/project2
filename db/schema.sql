@@ -4,9 +4,9 @@ USE Military_Connect;
 CREATE TABLE admins
 (
 	id int NOT NULL AUTO_INCREMENT,
-	name varchar(100) NULL,
+	first_name varchar(50) NULL,
+	last_name varchar(50) NULL,
 	email varchar(50) NULL,
-	bio text(400) NULL,
 	username varchar(25) NULL,
 	password char(20) NULL,
 	PRIMARY KEY (id)

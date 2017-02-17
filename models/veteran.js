@@ -47,7 +47,7 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING,
       },
     field: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
       },
     bio: {
       type: DataTypes.STRING

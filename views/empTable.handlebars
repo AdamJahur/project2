@@ -45,8 +45,8 @@
                                             <tr>
                                                 
                                                 <th>Company Name</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
+                                                <th>Recruiter Name</th>
+                                                <th>Email</th>
                                             </tr>
                                         </thead>
 
@@ -56,10 +56,10 @@
                                           {{#each employers}}
                                             <tr>      
 
-                                        <th scope="row">{{this.id}}</th>
-                                                <td><a href="/employer/{{this.id}}">{{this.company_name}}</a></td>
+                                        <th scope="row"><a href="/employer/{{this.id}}">{{this.company_name}}</a></th>
+                                                <td>{{this.first_name}} {{this.last_name}}</td>
 
-                                                <td>{{this.firstName}} {{this.lastName}}</td>
+                                                <td>{{this.email}}</td>
 
                                                 
                                         
