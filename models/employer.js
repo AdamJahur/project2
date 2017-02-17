@@ -49,6 +49,18 @@ module.exports = function(sequelize, DataTypes) {
     	logo: {
     		type: DataTypes.STRING
     	}
+    },
+
+    {
+      classMethods: {
+        associate: function(models) {
+          Employer.belongsTo(models.Job, {
+            foreignKey: {
+              allowNull: false
+            }
+          });
+        }
+      }
 	}, {
 
 		timestamps: false

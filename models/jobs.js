@@ -25,6 +25,20 @@ module.exports = function(sequelize, DataTypes) {
 		employer_id: {
 			type: DataTypes.STRING
 		}
+	},
+
+	 {
+     
+      classMethods: {
+        associate: function(models) {
+          Job.belongsTo(models.Employer, {
+            foreignKey: {
+              allowNull: false
+            }
+          });
+        }
+      }
+
 	}, {
 		timestamps: false
 
