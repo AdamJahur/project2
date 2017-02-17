@@ -7,13 +7,13 @@ module.exports = function(sequelize, DataTypes) {
 			autoIncrement: true,
 			primaryKey: true
 		},
-		name: {
+		first_name: {
 			type: DataTypes.STRING,
+		},
+		last_name: {
+			type: DataTypes.STRING
 		},
 		email: {
-			type: DataTypes.STRING,
-		},
-		bio: {
 			type: DataTypes.STRING,
 		},
 		username: {
@@ -21,9 +21,14 @@ module.exports = function(sequelize, DataTypes) {
 		},
 		password: {
 			type: DataTypes.STRING,
+		},
+		category: {
+			type:DataTypes.STRING
 		}
 	}, {
+
 		timestamps: false
+
 	});
 
 	return Admin;	

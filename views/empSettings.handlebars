@@ -23,80 +23,102 @@
 
 			<div class="row">
 
-				<form class="form-horizontal" role="form" method="POST" action="/api/vetSubmit">
+				<form class="form-horizontal" role="form" method="POST" action="/api/empSubmit">
 					
 					<div class="form-group">
 						
-						<div class="col-md-3"></div>
-						<label class="col-md-1" for="First Name">First Name</label>
+						<div class="col-md-2"></div>
+						<label class="col-md-1" for="Company">Company</label>
 
-						<div class="col-md-5">
-							<input type="text" class="form-control" name="first_name">
+						<div class="col-md-7">
+							<input type="text" class="form-control" name="company_name" value={{company_name}}>
 						</div>
-						<div class="col-md-3"></div>
+						<div class="col-md-2"></div>
 					</div>
 
 					<div class="form-group">
 						
-						<div class="col-md-3"></div>
-						<label class="col-md-1" for="Last Name">Last Name</label>
-						
-						<div class="col-md-5">
-							<input type="text" class="form-control" name="last_name">
+						<div class="col-md-2"></div>
+						<label class="col-md-1" for="First Name">Contact First Name</label>
+
+						<div class="col-md-7">
+							<input type="text" class="form-control" name="first_name" value={{first_name}}>
 						</div>
-						<div class="col-md-3"></div>
+						<div class="col-md-2"></div>
+					</div>
+
+					<div class="form-group">
+						
+						<div class="col-md-2"></div>
+						<label class="col-md-1" for="Last Name">Contact Last Name</label>
+						
+						<div class="col-md-7">
+							<input type="text" class="form-control" name="last_name" value={{last_name}}>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+
+					<div class="form-group">
+						
+						<div class="col-md-2"></div>
+						<label class="col-md-1" for="Website">Website</label>
+						
+						<div class="col-md-7">
+							<input type="text" class="form-control" name="website" value={{website}}>
+						</div>
+						<div class="col-md-2"></div>
 					</div>
 					
 					<div class="form-group">
 						
-						<div class="col-md-3"></div>
+						<div class="col-md-2"></div>
 						<label class="col-md-1" for="Email Address">Email Address</label>
 
-						<div class="col-md-5">
-							<input type="text" class="form-control" name="email">
+						<div class="col-md-7">
+							<input type="text" class="form-control" name="email" value={{email}}>
 						</div>
-						<div class="col-md-3"></div>
+						<div class="col-md-2"></div>
 					</div>
 
 					<div class="form-group">
 						
-						<div class="col-md-3"></div>
+						<div class="col-md-2"></div>
 						<label class="col-md-1" for="Phone Number">Phone Number</label>
 						
-						<div class="col-md-5">
-							<input type="text" class="form-control" name="phone_number">
+						<div class="col-md-7">
+							<input type="text" class="form-control" name="phone_number" value={{phone_number}}>
 						</div>
-						<div class="col-md-3"></div>
+						<div class="col-md-2"></div>
 					</div>
 
 					<div class="form-group">
 						
-						<div class="col-md-3"></div>
+						<div class="col-md-2"></div>
 						<label class="col-md-1" for="Address">Street Address</label>
 						
-						<div class="col-md-5">
-							<input type="text" class="form-control" name="address">
+						<div class="col-md-7">
+							<input type="text" class="form-control" name="address" value={{address}}>
 						</div>
-						<div class="col-md-3"></div>
+						<div class="col-md-2"></div>
 					</div>
 
 					<div class="form-group">
 						
-						<div class="col-md-3"></div>
+						<div class="col-md-2"></div>
 						<label class="col-md-1" for="City">City</label>
 						
-						<div class="col-md-5">
-							<input type="text" class="form-control" name="city">
+						<div class="col-md-7">
+							<input type="text" class="form-control" name="city" value={{city}}>
 						</div>
-						<div class="col-md-3"></div>
+						<div class="col-md-2"></div>
 					</div>
 
 					<div class="form-group">
 						
-						<div class="col-md-3"></div>
+						<div class="col-md-2"></div>
 						<label class="col-md-1" for="State">State</label>
 						
-						<div class="col-md-5">
+						<div class="col-md-7">
 							<select name="state" class="form-control select2">
 								<option>Select</option>
 								<option value="AL">Alabama</option>
@@ -152,84 +174,44 @@
 							</optgroup>
 						</select>
 					</div>
-					<div class="col-md-3"></div>
+					<div class="col-md-2"></div>
 				</div>
 
 				<div class="form-group">
 
-					<div class="col-md-3"></div>
+					<div class="col-md-2"></div>
 					<label class="col-md-1" for="Zip Code">Zip Code</label>
 
-					<div class="col-md-5">
-						<input type="text" class="form-control" name="zip">
+					<div class="col-md-7">
+						<input type="text" class="form-control" name="zip" value={{zip}}>
 					</div>
-					<div class="col-md-3"></div>
+					<div class="col-md-2"></div>
 				</div>
 
 				<div class="form-group">
 
-					<div class="col-md-3"></div>
-					<label class="col-md-1" for="Rank">Rank</label>
-
-					<div class="col-md-5">
-						<input type="text" class="form-control" name="rank">
-					</div>
-					<div class="col-md-3"></div>
-				</div>
-
-
-				<div class="form-group">
-					
-					<div class="col-md-3"></div>
-					<label class="col-md-1" for="Skills">Skills</label>
-					
-					<div class="col-md-5">
-						<select name="skills" class="form-control select2">
-						<option>Select</option>
-						<option value="Science">Science</option>
-						<option value="Management">Management</option>
-						<option value="Computer">Computer</option>
-						<option value="HR">HR</option>
-						<option value="Research">Research</option>
-						<option value="QA">QA</option>
-						<option value="Safety">Safety</option>
-						<option value="Diplomacy">Diplomacy</option>
-						<option value="Leadership">Leadership</option>
-						<option value="Sales">Sales</option>
-						<option value="Marketing">Marketing</option>
-						<option value="Medical">Medical</option>
-						<option value="Robotics">Robotics</option>
-						<option value="Investigation">Investigation</option>
-						<option value="Education">Education</option>
-						</select>
-					</div>
-				</div>
-
-				<div class="form-group">
-
-					<div class="col-md-3"></div>
+					<div class="col-md-2"></div>
 					<label class="col-md-1" for="City">Username</label>
 
-					<div class="col-md-5">
-						<input type="text" class="form-control" name="username">
+					<div class="col-md-7">
+						<input type="text" class="form-control" name={{username}}>
 					</div>
-					<div class="col-md-3"></div>
+					<div class="col-md-2"></div>
 				</div>
 
 				<div class="form-group">
 
-					<div class="col-md-3"></div>
+					<div class="col-md-2"></div>
 					<label class="col-md-1" for="City">Password</label>
 
-					<div class="col-md-5">
-						<input type="password" class="form-control" name="password">
+					<div class="col-md-7">
+						<input type="password" class="form-control" name={{password}}>
 					</div>
-					<div class="col-md-3"></div>
+					<div class="col-md-2"></div>
 				</div>
 
 				<div style="text-align: center">
 					<button type="submit" class="btn btn-primary" style="text-align: center">Submit</button>
-					<button class="btn btn-primary" style="text-align: center"><a href="/login" style="color: inherit">Back</a></button>
 				</div>
 			</form>
 		</div>

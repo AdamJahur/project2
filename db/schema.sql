@@ -19,7 +19,7 @@ CREATE TABLE employers
 	first_name varchar(50) NULL,
 	last_name varchar(50) NULL,
 	website varchar(100) NULL,
-	phone_number varchar(15) NULL,
+	phone_number varchar(50) NULL,
 	email varchar(50) NULL,
 	address varchar(150) NULL,
 	city varchar(100) NULL,
@@ -37,7 +37,7 @@ CREATE TABLE veterans
 	rank varchar(100) NULL,
 	first_name varchar(50) NULL,
 	last_name varchar(50) NULL,
-	phone_number varchar(15) NULL,
+	phone_number varchar(50) NULL,
 	email varchar(50) NULL,
 	address varchar(150) NULL,
 	city varchar(100) NULL,
@@ -46,6 +46,8 @@ CREATE TABLE veterans
 	skills text(400) NULL,
 	username varchar(25) NULL,
 	password char(20) NULL,
+	field varchar(50) NULL,
+	bio varchar(255) NULL,
 	PRIMARY KEY (id)
 );
 
@@ -55,6 +57,7 @@ CREATE TABLE jobs
 	job_title varchar(100) NULL,
 	job_description text(500) NULL,
 	skills text(400) NULL,
+	field text(50) NULL,
 	company_name varchar(100) NULL,
 	employer_id varchar(100) NULL,
 	PRIMARY KEY (id)

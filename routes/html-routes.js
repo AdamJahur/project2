@@ -1,38 +1,7 @@
-// *********************************************************************************
-// html-routes.js - this file offers a set of routes for sending users to the various html pages
-// *********************************************************************************
-
-// Dependencies
-// =============================================================
 var path = require("path");
 var db = require("../models")
 
-// Routes
-// =============================================================
 module.exports = function(app) {
-
-	app.get("/home/:user", function(req, res) {
-
-		var user = req.params.user;
-
-		db.Admin.findOne({
-			where: {
-				username: user
-			}
-		}).then(function(dbAdmin) {
-
-			var data = dbAdmin.dataValues;
-
-			var hbsObject = {
-				name: data.name,
-				email: data.email
-			}
-
-			console.log(hbsObject);
-
-			res.render("home", hbsObject);
-		});
-	});
 
 	app.get("/home", function(req, res) {
 
@@ -52,9 +21,12 @@ module.exports = function(app) {
 
 			for (i = 0; i < dbAdmin.length; i++) {
 
-				var input = dbAdmin[i].dataValues;
+				if(dbAdmin[i].dataValues.category === "admin") {
 
-				data.push(input);
+					var input = dbAdmin[i].dataValues;
+
+					data.push(input);
+				}
 			}
 
 			var hbsObject = {
@@ -67,8 +39,6 @@ module.exports = function(app) {
 	});
 
 	app.get("/profile/:id", function(req, res) {
-
-		console.log("Profile ID: ", req.params.id);
 
 		db.Admin.findOne({
 			where: {
@@ -121,13 +91,13 @@ module.exports = function(app) {
 			var values = dbEmployer.dataValues;
 
 			var hbsObject = {
-				companyName: values.companyName,
+				companyName: values.company_name,
+				firstName: values.first_name,
+				lastName: values.last_name,
 				website: values.website,
-				phoneNumber: values.phoneNumber,
-				firstName: values.firstName,
-				lastName: values.lastName,
+				phoneNumber: values.phone_number,
 				email: values.email,
-				address1: values.address1,
+				address1: values.address,
 				city: values.city,
 				state: values.state,
 				zip: values.zip,
@@ -153,17 +123,7 @@ module.exports = function(app) {
 
 			var values = dbVeterans.dataValues;
 
-			var hbsObject = {
-				rank: values.rank,
-				firstName: values.firstName,
-				lastName: values.lastName,
-				phoneNumber: values.phoneNumber,
-				email: values.email,
-				address1: values.address1,
-				city: values.city,
-				state: values.state,
-				zip: values.zip,
-			}
+			var hbsObject = values
 
 			// console.log(hbsObject);
 			res.render("veteran", hbsObject);
@@ -173,9 +133,8 @@ module.exports = function(app) {
 	app.get("/veteran", function(req, res) {
 
 		db.Veteran.findAll({}).then(function(dbVeterans){
-			var data = [];
 
-				//console.log(dbVeterans);
+			var data = [];
 
 				for (var i = 0; i < dbVeterans.length; i++) {
 					var input = dbVeterans[i].dataValues;
@@ -186,12 +145,8 @@ module.exports = function(app) {
 					veterans: data
 				}
 
-				//console.log(hbsObject);
 				res.render("vetTable", hbsObject);
-
-
 			});
-
 	});
 
 	app.get("/jobsTable", function(req, res) {
@@ -213,4 +168,72 @@ module.exports = function(app) {
 			res.render("jobs", hbsObject);
 		});
 	});
+
+	app.get("/user/veteran/:user", function(req, res) {
+
+		console.log(req.params.user);
+
+		db.Veteran.findOne({
+			where: {
+				username: req.params.user
+			}
+		}).then(function(dbVeteran) {
+
+			var values = dbVeteran.dataValues;
+			var hbsObject = values;
+
+			hbsObject.layout = "veteran";
+
+			res.render("veteran", hbsObject);
+		})
+	});
+
+	app.get("/user/veteran/setting/:user", function(req, res) {
+
+		db.Veteran.findOne({
+			where: {
+				username: req.params.user
+			}
+		}).then(function(dbVeteran) {
+
+			var hbsObject = dbVeteran.dataValues;
+
+			hbsObject.layout = "veteran";
+
+			res.render("vetSettings", hbsObject);
+		});
+	});
+
+	app.get("/user/employer/:user", function(req, res) {
+
+		db.Employer.findOne({
+			where: {
+				username: req.params.user
+			}
+		}).then(function(dbEmployer) {
+
+			var values = dbEmployer.dataValues;
+			var hbsObject = values;
+
+			hbsObject.layout = "employer";
+
+			res.render("employer", hbsObject);
+		});
+	});
+
+	app.get("/user/employer/setting/:user", function(req, res) {
+
+		db.Employer.findOne({
+			where: {
+				username: req.params.user
+			}
+		}).then(function(dbEmployer) {
+
+			var hbsObject = dbEmployer.dataValues;
+
+			hbsObject.layout = "employer";
+
+			res.render("empSettings", hbsObject);
+		})
+	})
 };
