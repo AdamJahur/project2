@@ -52,21 +52,11 @@
                             <ul class="nav navbar-nav hidden-sm hidden-xs top-navbar-items">
 
                                 <li><a href="/team">Team</a></li>
-                                
+
                             </ul>
 
                             <!-- Top nav Right menu -->
                             <ul class="nav navbar-nav navbar-right top-navbar-items-right pull-right">
-
-                                <li class="hidden-xs">
-
-                                    <form role="search" class="navbar-left app-search pull-left">
-
-                                         <input type="text" placeholder="Search..." class="form-control">
-
-                                         <a href=""><i class="fa fa-search"></i></a>
-                                    </form>
-                                </li>
 
                                 <li class="hidden-xs">
 
@@ -99,6 +89,8 @@
                                 <li><a href="/employer"><i></i>Employer</a></li>
     
                                 <li><a href="/jobsTable"><i></i>Jobs</a></li>
+
+                                <li><a href="/search"><i></i>Search</a></li>
 
                             </ul>
                                 <!-- End Left Menu -->
@@ -140,13 +132,17 @@
     <!-- Team Js -->
     <script src="/assets/js/team.js"></script>
 
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
     <script type="text/javascript">
+
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
+
       function drawChart() {
 
         var data = google.visualization.arrayToDataTable([
+
           ['Service Branch', 'Number of Veterans'],
           ['Marines',     1],
           ['Army',      1],

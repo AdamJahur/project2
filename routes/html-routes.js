@@ -236,4 +236,11 @@ module.exports = function(app) {
 			res.render("empSettings", hbsObject);
 		})
 	})
+
+	app.get("/search", function(req, res) {
+
+		console.log(req.body);
+
+		res.render("search");
+	})
 };
