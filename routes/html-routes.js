@@ -37,8 +37,6 @@ module.exports = function(app) {
 				}
 			}
 
-			console.log(data);
-
 			var hbsObject = {
 				admins: data
 			}
@@ -155,9 +153,8 @@ module.exports = function(app) {
 	app.get("/veteran", function(req, res) {
 
 		db.Veteran.findAll({}).then(function(dbVeterans){
-			var data = [];
 
-				//console.log(dbVeterans);
+			var data = [];
 
 				for (var i = 0; i < dbVeterans.length; i++) {
 					var input = dbVeterans[i].dataValues;
@@ -168,12 +165,8 @@ module.exports = function(app) {
 					veterans: data
 				}
 
-				//console.log(hbsObject);
 				res.render("vetTable", hbsObject);
-
-
 			});
-
 	});
 
 	app.get("/jobsTable", function(req, res) {
@@ -207,9 +200,6 @@ module.exports = function(app) {
 		}).then(function(dbVeteran) {
 
 			var values = dbVeteran.dataValues;
-
-			console.log(values);
-
 			var hbsObject = values;
 
 			hbsObject.layout = "user";
@@ -227,9 +217,27 @@ module.exports = function(app) {
 		}).then(function(dbVeteran) {
 
 			var hbsObject = dbVeteran.dataValues;
+
 			hbsObject.layout = "user";
 
 			res.render("vetSettings", hbsObject);
+		});
+	});
+
+	app.get("/user/employer/:user", function(req, res) {
+
+		db.Employer.findOne({
+			where: {
+				username: req.params.user
+			}
+		}).then(function(dbEmployer) {
+
+			var values = dbVeteran.dataValues;
+			var hbsObject = values;
+
+			hbsObject.layout = "user";
+
+			res.render("employer", hbsObject);
 		});
 	});
 };

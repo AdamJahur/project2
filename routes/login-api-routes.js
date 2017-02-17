@@ -33,11 +33,16 @@ module.exports = function(app) {
 					case "admin":
 
 						res.redirect("/home");
+						break;
 
 					case "veteran":
 
-						console.log("URL: /user/veteran/" + user);
 						res.redirect("/user/veteran/" + user);
+						break;
+
+					case "employer":
+
+						res.redirect("/user/employer" + user);
 						break;
 				};
 
