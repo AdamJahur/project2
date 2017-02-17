@@ -1,7 +1,7 @@
-INSERT INTO admins (name, email, bio, username, password) VALUES ('Adam Jahur','adamnjahur@gmail.com','This is my bio.','username', 'password');
-INSERT INTO admins (name, email, bio, username, password) VALUES ('Devin Zimmerman','DZimmerman@gmail.com','This is my bio.','username69', 'password69');
-INSERT INTO admins (name, email, bio, username, password) VALUES ('Edwin Rivera','ERivera@gmail.com','This is my bio.','username1', 'password1');
-INSERT INTO admins (name, email, bio, username, password) VALUES ('Beatriz Lopez','BLopez@gmail.com','This is my bio.','username2', 'password2');
+INSERT INTO admins (first_name, last_name, email, username, password) VALUES ('Adam Jahur','adamnjahur@gmail.com','This is my bio.','username', 'password');
+INSERT INTO admins (first_name, last_name, email, username, password) VALUES ('Devin Zimmerman','DZimmerman@gmail.com','This is my bio.','username69', 'password69');
+INSERT INTO admins (first_name, last_name, email, username, password) VALUES ('Edwin Rivera','ERivera@gmail.com','This is my bio.','username1', 'password1');
+INSERT INTO admins (first_name, last_name, email, username, password) VALUES ('Beatriz Lopez','BLopez@gmail.com','This is my bio.','username2', 'password2');
 
 INSERT INTO employers (company_name, first_name, last_name, website, phone_number, email, address, city, state, zip, username, password, logo) VALUES ('Versalife', 'Adam', 'Jensen', '123-456-7789', 'ajensen@versalife.com', 'www.versalife.com', '123 Main St.', 'Orlando', 'FL', '25878', 'deusex', 'adam3', 'versalife.png');
 INSERT INTO employers (company_name, first_name, last_name, website, phone_number, email, address, city, state, zip, username, password, logo) VALUES ('Vault-Tec', 'John', 'Hancock', '789-456-1236', 'johnh@vaulttec.com', 'www.vaulttec.com', '234 Second St.', 'New York', 'NY', '12345', 'ghoul', 'john1', 'vaulttec.png');
