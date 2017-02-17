@@ -30,10 +30,15 @@ module.exports = function(app) {
 
 				switch(category) {
 					
+					case "admin":
+
+						res.redirect("/home");
+
 					case "veteran":
 
 						console.log("URL: /user/veteran/" + user);
 						res.redirect("/user/veteran/" + user);
+						break;
 				};
 
 			

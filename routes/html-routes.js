@@ -11,29 +11,6 @@ var db = require("../models")
 // =============================================================
 module.exports = function(app) {
 
-	app.get("/home/:user", function(req, res) {
-
-		var user = req.params.user;
-
-		db.Admin.findOne({
-			where: {
-				username: user
-			}
-		}).then(function(dbAdmin) {
-
-			var data = dbAdmin.dataValues;
-
-			var hbsObject = {
-				name: data.name,
-				email: data.email
-			}
-
-			console.log(hbsObject);
-
-			res.render("home", hbsObject);
-		});
-	});
-
 	app.get("/home", function(req, res) {
 
 		res.render("home");
@@ -52,10 +29,15 @@ module.exports = function(app) {
 
 			for (i = 0; i < dbAdmin.length; i++) {
 
-				var input = dbAdmin[i].dataValues;
+				if(dbAdmin[i].dataValues.category === "admin") {
 
-				data.push(input);
+					var input = dbAdmin[i].dataValues;
+
+					data.push(input);
+				}
 			}
+
+			console.log(data);
 
 			var hbsObject = {
 				admins: data

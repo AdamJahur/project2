@@ -24,6 +24,18 @@ module.exports = function(app) {
 
 	app.post("/api/veteran/update/:user", function(req, res) {
 
-		console.log(req.params.user);
-	})
+		var user = req.params.user;
+
+		db.Veteran.update(req.body, {
+			where: {
+				username: user
+			}
+		
+		}).then(function(data) {
+
+			console.log(user);
+
+		res.redirect("/user/veteran/" + user)
+		});
+	});
 }

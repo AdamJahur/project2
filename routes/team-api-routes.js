@@ -6,6 +6,8 @@ module.exports = function(app) {
 
 	app.post("/api/addteam", function(req, res) {
 
+		req.body.category = "admin";
+
 		db.Admin.create(req.body).then(function(dbAdmin) {
 			res.redirect("/team");
 		});

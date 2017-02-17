@@ -30,9 +30,18 @@
 
                                     <div class="form-group">
 
-                                        <label for="name" class="col-md-2 control-label">Name</label>
+                                        <label for="name" class="col-md-2 control-label">First Name</label>
                                         <div class="col-md-9">
-                                            <input name="name" type="name" class="form-control" id="name" placeholder="Name">
+                                            <input name="first_name" type="name" class="form-control" id="name" placeholder="First Name">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="name" class="col-md-2 control-label">Last Name</label>
+                                        <div class="col-md-9">
+                                            <input name="last_name" type="name" class="form-control" id="name" placeholder="Last Name">
                                         </div>
 
                                     </div>
@@ -59,7 +68,7 @@
 
                                         <label for="name" class="col-md-2 control-label">Password</label>
                                         <div class="col-md-9">
-                                            <input name="password" type="name" class="form-control" id="name" placeholder="Password">
+                                            <input name="password" type="password" class="form-control" id="name" placeholder="Password">
                                         </div>
 
                                     </div>
@@ -100,7 +109,7 @@
             <div class="member-card">
 
                 <div class="">
-                    <h4 class="m-b-5">{{this.name}}</h4>
+                    <h4 class="m-b-5">{{this.first_name}} {{this.last_name}}</h4>
                     <p class="text-muted"><span> <a href="#" class="text-pink">{{this.email}}</a> </span></p>
                 </div>
 
@@ -112,18 +121,6 @@
 
                 <a href="/profile/{{this.id}}">
     			<button type="button" class="btn btn-default btn-sm m-t-10">View Profile</button></a>
-
-                <ul class="social-links list-inline m-t-30">
-                    <li>
-                        <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li>
-                        <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Skype"><i class="fa fa-skype"></i></a>
-                    </li>
-                </ul>
 
             </div>
 
