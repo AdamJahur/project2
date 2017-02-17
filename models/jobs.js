@@ -25,6 +25,7 @@ module.exports = function(sequelize, DataTypes) {
 		employer_id: {
 			type: DataTypes.STRING
 		}
+		
 	}, {
 		timestamps: false
 

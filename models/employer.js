@@ -48,7 +48,8 @@ module.exports = function(sequelize, DataTypes) {
     	},
     	logo: {
     		type: DataTypes.STRING
-    	}
+    	},
+    	
 	}, {
 
 		timestamps: false

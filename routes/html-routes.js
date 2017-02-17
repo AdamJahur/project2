@@ -83,8 +83,9 @@ module.exports = function(app) {
 		db.Employer.findOne({
 
 			where: {
-				id: req.params.id
-			}
+				id: req.params.id,				
+			},
+				include: [db.Job]
 
 		}).then(function(dbEmployer){
 
