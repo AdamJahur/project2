@@ -213,4 +213,41 @@ module.exports = function(app) {
 			res.render("jobs", hbsObject);
 		});
 	});
+
+	app.get("/user/veteran/:user", function(req, res) {
+
+		console.log(req.params.user);
+
+		db.Veteran.findOne({
+			where: {
+				username: req.params.user
+			}
+		}).then(function(dbVeteran) {
+
+			var values = dbVeteran.dataValues;
+
+			console.log(values);
+
+			var hbsObject = values;
+
+			hbsObject.layout = "user";
+
+			res.render("veteran", hbsObject);
+		})
+	});
+
+	app.get("/user/veteran/setting/:user", function(req, res) {
+
+		db.Veteran.findOne({
+			where: {
+				username: req.params.user
+			}
+		}).then(function(dbVeteran) {
+
+			var hbsObject = dbVeteran.dataValues;
+			hbsObject.layout = "user";
+
+			res.render("vetSettings", hbsObject);
+		});
+	});
 };

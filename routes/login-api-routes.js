@@ -17,33 +17,45 @@ module.exports = function(app) {
 
 		console.log("User: ", user);
 
-			db.Admin.findAll({
+			db.Admin.findOne({
 				where: {
 					username: user
-				}, include: [
-				{
-					model: db.Veteran
-				}]
+				}
 			}).then(function(dbAdmin) {
 
-				console.log(dbAdmin);
+				var category = dbAdmin.dataValues.category;
+				var user = dbAdmin.dataValues.username;
+				console.log("Username: ", user);
+				console.log("Category: ", category);
 
-				if (dbAdmin === null) {
+				switch(category) {
+					
+					case "veteran":
 
-					res.redirect("/error");
-					return;
-				}
+						console.log("URL: /user/veteran/" + user);
+						res.redirect("/user/veteran/" + user);
+				};
 
-				var password = dbAdmin.dataValues.password;
+			
 
-				if (pass === password) {
 
-					res.redirect("/home/" + user);
 
-				} else {
+				// if (dbAdmin === null) {
 
-					res.redirect("/error");
-				}
+				// 	res.redirect("/error");
+				// 	return;
+				// }
+
+				// var password = dbAdmin.dataValues.password;
+
+				// if (pass === password) {
+
+				// 	res.redirect("/home/" + user);
+
+				// } else {
+
+				// 	res.redirect("/error");
+				// }
 				
 			});
 	});

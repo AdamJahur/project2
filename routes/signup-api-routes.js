@@ -14,7 +14,16 @@ module.exports = function(app) {
 		console.log(req.body);
 
 		db.Veteran.create(req.body).then(function(adVeteran) {
+		});
+
+		db.Admin.create(req.body).then(function(adVeteran) {
 			res.redirect("/login");
+
 		})
+	});
+
+	app.post("/api/veteran/update/:user", function(req, res) {
+
+		console.log(req.params.user);
 	})
 }
