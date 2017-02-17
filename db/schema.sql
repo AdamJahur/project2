@@ -47,6 +47,7 @@ CREATE TABLE veterans
 	username varchar(25) NULL,
 	password char(20) NULL,
 	field varchar(50) NULL,
+	bio varchar(255) NULL,
 	PRIMARY KEY (id)
 );
 
