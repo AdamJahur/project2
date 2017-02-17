@@ -1,14 +1,6 @@
-// *********************************************************************************
-// html-routes.js - this file offers a set of routes for sending users to the various html pages
-// *********************************************************************************
-
-// Dependencies
-// =============================================================
 var path = require("path");
 var db = require("../models")
 
-// Routes
-// =============================================================
 module.exports = function(app) {
 
 	app.get("/home", function(req, res) {
@@ -47,8 +39,6 @@ module.exports = function(app) {
 	});
 
 	app.get("/profile/:id", function(req, res) {
-
-		console.log("Profile ID: ", req.params.id);
 
 		db.Admin.findOne({
 			where: {
@@ -133,18 +123,7 @@ module.exports = function(app) {
 
 			var values = dbVeterans.dataValues;
 
-			var hbsObject = {
-				rank: values.rank,
-				firstName: values.first_name,
-				lastName: values.last_name,
-				phoneNumber: values.phone_number,
-				email: values.email,
-				address1: values.address,
-				city: values.city,
-				state: values.state,
-				zip: values.zip,
-				bio: values.bio
-			}
+			var hbsObject = values
 
 			// console.log(hbsObject);
 			res.render("veteran", hbsObject);
