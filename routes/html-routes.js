@@ -11,29 +11,6 @@ var db = require("../models")
 // =============================================================
 module.exports = function(app) {
 
-	app.get("/home/:user", function(req, res) {
-
-		var user = req.params.user;
-
-		db.Admin.findOne({
-			where: {
-				username: user
-			}
-		}).then(function(dbAdmin) {
-
-			var data = dbAdmin.dataValues;
-
-			var hbsObject = {
-				name: data.name,
-				email: data.email
-			}
-
-			console.log(hbsObject);
-
-			res.render("home", hbsObject);
-		});
-	});
-
 	app.get("/home", function(req, res) {
 
 		res.render("home");
@@ -52,9 +29,12 @@ module.exports = function(app) {
 
 			for (i = 0; i < dbAdmin.length; i++) {
 
-				var input = dbAdmin[i].dataValues;
+				if(dbAdmin[i].dataValues.category === "admin") {
 
-				data.push(input);
+					var input = dbAdmin[i].dataValues;
+
+					data.push(input);
+				}
 			}
 
 			var hbsObject = {
@@ -174,9 +154,8 @@ module.exports = function(app) {
 	app.get("/veteran", function(req, res) {
 
 		db.Veteran.findAll({}).then(function(dbVeterans){
-			var data = [];
 
-				//console.log(dbVeterans);
+			var data = [];
 
 				for (var i = 0; i < dbVeterans.length; i++) {
 					var input = dbVeterans[i].dataValues;
@@ -187,12 +166,8 @@ module.exports = function(app) {
 					veterans: data
 				}
 
-				//console.log(hbsObject);
 				res.render("vetTable", hbsObject);
-
-
 			});
-
 	});
 
 	app.get("/jobsTable", function(req, res) {
@@ -212,6 +187,58 @@ module.exports = function(app) {
 			}
 
 			res.render("jobs", hbsObject);
+		});
+	});
+
+	app.get("/user/veteran/:user", function(req, res) {
+
+		console.log(req.params.user);
+
+		db.Veteran.findOne({
+			where: {
+				username: req.params.user
+			}
+		}).then(function(dbVeteran) {
+
+			var values = dbVeteran.dataValues;
+			var hbsObject = values;
+
+			hbsObject.layout = "veteran";
+
+			res.render("veteran", hbsObject);
+		})
+	});
+
+	app.get("/user/veteran/setting/:user", function(req, res) {
+
+		db.Veteran.findOne({
+			where: {
+				username: req.params.user
+			}
+		}).then(function(dbVeteran) {
+
+			var hbsObject = dbVeteran.dataValues;
+
+			hbsObject.layout = "veteran";
+
+			res.render("vetSettings", hbsObject);
+		});
+	});
+
+	app.get("/user/employer/:user", function(req, res) {
+
+		db.Employer.findOne({
+			where: {
+				username: req.params.user
+			}
+		}).then(function(dbEmployer) {
+
+			var values = dbEmployer.dataValues;
+			var hbsObject = values;
+
+			hbsObject.layout = "employer";
+
+			res.render("employer", hbsObject);
 		});
 	});
 };

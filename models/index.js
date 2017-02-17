@@ -33,7 +33,4 @@ Object.keys(db).forEach(function(modelName) {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-db.Admin.belongsTo(db.Veteran);
-db.Admin.belongsTo(db.Employer);
-
 module.exports = db;
