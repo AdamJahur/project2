@@ -42,7 +42,7 @@ module.exports = function(app) {
 
 					case "employer":
 
-						res.redirect("/user/employer" + user);
+						res.redirect("/user/employer/" + user);
 						break;
 				};
 
