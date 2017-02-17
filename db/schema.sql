@@ -14,7 +14,7 @@ CREATE TABLE admins
 
 CREATE TABLE employers
 (
-	id int NOT NULL AUTO_INCREMENT,
+	companyId int NOT NULL AUTO_INCREMENT,
 	company_name varchar(100) NULL,
 	first_name varchar(50) NULL,
 	last_name varchar(50) NULL,
@@ -28,7 +28,7 @@ CREATE TABLE employers
 	username varchar(25) NULL,
 	password char(20) NULL,
 	logo varchar(255) NULL,
-	PRIMARY KEY (id)
+	PRIMARY KEY (companyId)
 );
 
 CREATE TABLE veterans
@@ -61,6 +61,9 @@ CREATE TABLE jobs
 	field text(50) NULL,
 	company_name varchar(100) NULL,
 	employer_id varchar(100) NULL,
-	PRIMARY KEY (id)
+	companyId int,
+	PRIMARY KEY (id),
+	CONSTRAINT jobs_ibfk_1 FOREIGN KEY (companyId) 
+	REFERENCES employers(companyId)
 );
 
