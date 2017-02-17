@@ -48,13 +48,10 @@ module.exports = function(sequelize, DataTypes) {
     },
   field: {
     type: DataTypes.STRING,
-  },
-  category: {
-      type: DataTypes.STRING
-    }
-  }, {
+  }
+  {
        timestamps: false
-    });
+    };
   return Veteran;
 };
 
