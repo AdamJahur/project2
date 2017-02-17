@@ -101,13 +101,13 @@ module.exports = function(app) {
 			var values = dbEmployer.dataValues;
 
 			var hbsObject = {
-				companyName: values.companyName,
+				companyName: values.company_name,
+				firstName: values.first_name,
+				lastName: values.last_name,
 				website: values.website,
-				phoneNumber: values.phoneNumber,
-				firstName: values.firstName,
-				lastName: values.lastName,
+				phoneNumber: values.phone_number,
 				email: values.email,
-				address1: values.address1,
+				address1: values.address,
 				city: values.city,
 				state: values.state,
 				zip: values.zip,
@@ -135,14 +135,15 @@ module.exports = function(app) {
 
 			var hbsObject = {
 				rank: values.rank,
-				firstName: values.firstName,
-				lastName: values.lastName,
-				phoneNumber: values.phoneNumber,
+				firstName: values.first_name,
+				lastName: values.last_name,
+				phoneNumber: values.phone_number,
 				email: values.email,
-				address1: values.address1,
+				address1: values.address,
 				city: values.city,
 				state: values.state,
 				zip: values.zip,
+				bio: values.bio
 			}
 
 			// console.log(hbsObject);
