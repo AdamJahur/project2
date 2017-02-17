@@ -17,10 +17,10 @@ module.exports = function(sequelize, DataTypes) {
 			type: DataTypes.STRING,
 		},
 		website: {
-			type: DataTypes.STRING
+			type: DataTypes.STRING,
 		},
 		phone_number: {
-			type: DataTypes.STRING
+			type: DataTypes.STRING,
 		},
 		email: {
 			type: DataTypes.STRING,
