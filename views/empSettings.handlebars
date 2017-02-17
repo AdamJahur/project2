@@ -1,0 +1,219 @@
+<div class="container">
+	
+	<div class="row">
+		
+		<div class="col-md-12">
+
+			<div class="row">
+
+				<div class="p-20 m-b-20">
+
+					<div class="col-md-3"></div>
+
+					<div class="col-md-6">
+
+						<h4 class="header-title m-t-0 m-b-0">Veteran Information</h4>
+
+						<h6>Fill In Information Below</h6>
+					</div>	
+					<div class="col-md-3"></div>
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+
+				<form class="form-horizontal" role="form" method="POST" action="/api/empSubmit">
+					
+					<div class="form-group">
+						
+						<div class="col-md-2"></div>
+						<label class="col-md-1" for="Company">Company</label>
+
+						<div class="col-md-7">
+							<input type="text" class="form-control" name="company_name" value={{company_name}}>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+
+					<div class="form-group">
+						
+						<div class="col-md-2"></div>
+						<label class="col-md-1" for="First Name">Contact First Name</label>
+
+						<div class="col-md-7">
+							<input type="text" class="form-control" name="first_name" value={{first_name}}>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+
+					<div class="form-group">
+						
+						<div class="col-md-2"></div>
+						<label class="col-md-1" for="Last Name">Contact Last Name</label>
+						
+						<div class="col-md-7">
+							<input type="text" class="form-control" name="last_name" value={{last_name}}>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+
+					<div class="form-group">
+						
+						<div class="col-md-2"></div>
+						<label class="col-md-1" for="Website">Website</label>
+						
+						<div class="col-md-7">
+							<input type="text" class="form-control" name="website" value={{website}}>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+					
+					<div class="form-group">
+						
+						<div class="col-md-2"></div>
+						<label class="col-md-1" for="Email Address">Email Address</label>
+
+						<div class="col-md-7">
+							<input type="text" class="form-control" name="email" value={{email}}>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+
+					<div class="form-group">
+						
+						<div class="col-md-2"></div>
+						<label class="col-md-1" for="Phone Number">Phone Number</label>
+						
+						<div class="col-md-7">
+							<input type="text" class="form-control" name="phone_number" value={{phone_number}}>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+
+					<div class="form-group">
+						
+						<div class="col-md-2"></div>
+						<label class="col-md-1" for="Address">Street Address</label>
+						
+						<div class="col-md-7">
+							<input type="text" class="form-control" name="address" value={{address}}>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+
+					<div class="form-group">
+						
+						<div class="col-md-2"></div>
+						<label class="col-md-1" for="City">City</label>
+						
+						<div class="col-md-7">
+							<input type="text" class="form-control" name="city" value={{city}}>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+
+					<div class="form-group">
+						
+						<div class="col-md-2"></div>
+						<label class="col-md-1" for="State">State</label>
+						
+						<div class="col-md-7">
+							<select name="state" class="form-control select2">
+								<option>Select</option>
+								<option value="AL">Alabama</option>
+								<option value="AK">Alaska</option>
+								<option value="AZ">Arizona</option>
+								<option value="AR">Arkansas</option>
+								<option value="CA">California</option>
+								<option value="CO">Colorado</option>
+								<option value="CT">Connecticut</option>
+								<option value="DE">Delaware</option>
+								<option value="FL">Florida</option>
+								<option value="GA">Georgia</option>
+								<option value="HI">Hawaii</option>
+								<option value="ID">Idaho</option>
+								<option value="IL">Illinois</option>
+								<option value="IN">Indiana</option>
+								<option value="IA">Iowa</option>
+								<option value="KS">Kansas</option>
+								<option value="KY">Kentucky</option>
+								<option value="LA">Louisiana</option>
+								<option value="ME">Maine</option>
+								<option value="MD">Maryland</option>
+								<option value="MA">Massachusetts</option>
+								<option value="MI">Michigan</option>
+								<option value="MN">Minnesota</option>
+								<option value="MS">Mississippi</option>
+								<option value="MO">Missouri</option>
+								<option value="MT">Montana</option>
+								<option value="NE">Nebraska</option>
+								<option value="NV">Nevada</option>
+								<option value="NH">New Hampshire</option>
+								<option value="NJ">New Jersey</option>
+								<option value="NM">New Mexico</option>
+								<option value="NY">New York</option>
+								<option value="NC">North Carolina</option>
+								<option value="ND">North Dakota</option>
+								<option value="OH">Ohio</option>
+								<option value="OK">Oklahoma</option>
+								<option value="OR">Oregnon</option>
+								<option value="PA">Pennsylvania</option>
+								<option value="RI">Rhode Island</option>
+								<option value="SC">South Carolina</option>
+								<option value="SD">Sourth Dakota</option>
+								<option value="TN">Tennessee</option>
+								<option value="TX">Texas</option>
+								<option value="UT">Utah</option>
+								<option value="VT">Vermont</option>
+								<option value="VA">Virginia</option>
+								<option value="WA">Washington</option>
+								<option value="WV">West Virginia</option>
+								<option value="WI">Wisconsin</option>
+								<option value="WY">Wyoming</option>
+							</optgroup>
+						</select>
+					</div>
+					<div class="col-md-2"></div>
+				</div>
+
+				<div class="form-group">
+
+					<div class="col-md-2"></div>
+					<label class="col-md-1" for="Zip Code">Zip Code</label>
+
+					<div class="col-md-7">
+						<input type="text" class="form-control" name="zip" value={{zip}}>
+					</div>
+					<div class="col-md-2"></div>
+				</div>
+
+				<div class="form-group">
+
+					<div class="col-md-2"></div>
+					<label class="col-md-1" for="City">Username</label>
+
+					<div class="col-md-7">
+						<input type="text" class="form-control" name={{username}}>
+					</div>
+					<div class="col-md-2"></div>
+				</div>
+
+				<div class="form-group">
+
+					<div class="col-md-2"></div>
+					<label class="col-md-1" for="City">Password</label>
+
+					<div class="col-md-7">
+						<input type="password" class="form-control" name={{password}}>
+					</div>
+					<div class="col-md-2"></div>
+				</div>
+
+				<div style="text-align: center">
+					<button type="submit" class="btn btn-primary" style="text-align: center">Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
