@@ -241,4 +241,20 @@ module.exports = function(app) {
 			res.render("employer", hbsObject);
 		});
 	});
+
+	app.get("/user/employer/setting/:user", function(req, res) {
+
+		db.Employer.findOne({
+			where: {
+				username: req.params.user
+			}
+		}).then(function(dbEmployer) {
+
+			var hbsObject = dbEmployer.dataValues;
+
+			hbsObject.layout = "employer";
+
+			res.render("empSettings", hbsObject);
+		})
+	})
 };
