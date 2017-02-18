@@ -1,7 +1,9 @@
-INSERT INTO Admins (first_name, last_name, email, username, password) VALUES ('Adam Jahur','adamnjahur@gmail.com','This is my bio.','username', 'password');
-INSERT INTO Admins (first_name, last_name, email, username, password) VALUES ('Devin Zimmerman','DZimmerman@gmail.com','This is my bio.','username69', 'password69');
-INSERT INTO Admins (first_name, last_name, email, username, password) VALUES ('Edwin Rivera','ERivera@gmail.com','This is my bio.','username1', 'password1');
-INSERT INTO Admins (first_name, last_name, email, username, password) VALUES ('Beatriz Lopez','BLopez@gmail.com','This is my bio.','username2', 'password2');
+INSERT INTO Admins (first_name, last_name, email, username, password, category) VALUES ('Adam', 'Jahur','adamnjahur@gmail.com', 'username', 'password', 'admin');
+INSERT INTO Admins (first_name, last_name, email, username, password, category) VALUES ('Devin', 'Zimmerman','DZimmerman@gmail.com', 'username69', 'password69', 'admin');
+INSERT INTO Admins (first_name, last_name, email, username, password, category) VALUES ('Edwin', 'Rivera','ERivera@gmail.com','username1', 'password1', 'admin');
+INSERT INTO Admins (first_name, last_name, email, username, password, category) VALUES ('Beatriz', 'Lopez','BLopez@gmail.com','username2', 'password2', 'admin');
+INSERT INTO Admins (first_name, last_name, email, username, password, category) VALUES ('Cynthia','Flemming','CFlemming@yahoo.com','WOFlemming','NavyWO01', 'veteran');
+INSERT INTO Admins (first_name, last_name, email, username, password, category) VALUES ('Adam', 'Jensen', 'ajensen@versalife.com', 'deusex', 'adam3', 'employer');
 
 INSERT INTO Employers (company_name, first_name, last_name, phone_number, email, website, address, city, state, zip, username, password, logo, category) VALUES ('Versalife', 'Adam', 'Jensen', '123-456-7789', 'ajensen@versalife.com', 'www.versalife.com', '123 Main St.', 'Orlando', 'FL', '25878', 'deusex', 'adam3', 'versalife.png', 'employer');
 INSERT INTO Employers (company_name, first_name, last_name, phone_number, email, website, address, city, state, zip, username, password, logo, category) VALUES ('Vault-Tec', 'John', 'Hancock', '789-456-1236', 'johnh@vaulttec.com', 'www.vaulttec.com', '234 Second St.', 'New York', 'NY', '12345', 'ghoul', 'john1', 'vaulttec.png', 'employer');
