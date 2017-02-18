@@ -1,16 +1,23 @@
-var mysql = require("mysql");
+var Sequelize = require("sequelize");
 var connection;
 
-if (process.env.JAWSDB_URL) {
-	connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
-	connectin = mysql.createConnection({
-		host: 'localhost',
-		user: 'root',
-		password: '35cYqeqPam5g',
-		database: 'military_connect'
-	});
-};
+var env;
+if (process.env.JAWSDB_URL)
+	env = "production";
+else {
+	env = "development";
+}
 
-connection.connect();
-module.exports = connection;
+var config =require('./confg')[env]
+
+var sequelize;
+if(config.use_env_variable) {
+	sequelize = new Sequelize(process.env[config.use_env_variable]);
+} else {
+	sequelize = new Sequelize(config.database, config.username, config.password, {
+		host: config.host,
+		dialect: config.dialect
+	});
+}
+
+module.exports = sequelize;
