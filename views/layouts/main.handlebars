@@ -47,24 +47,14 @@
                     <div class="container">
 
                         <div class="">
-                            <!-- Top nav left menu -->
-
-                            <ul class="nav navbar-nav hidden-sm hidden-xs top-navbar-items">
-                                <li><a href="/team">Team</a></li>
-                                <li><a href="#">Help</a></li>
-                            </ul>
 
                             <!-- Top nav Right menu -->
                             <ul class="nav navbar-nav navbar-right top-navbar-items-right pull-right">
 
                                 <li class="hidden-xs">
 
-                                    <form role="search" class="navbar-left app-search pull-left">
-
-                                         <input type="text" placeholder="Search..." class="form-control">
-
-                                         <a href=""><i class="fa fa-search"></i></a>
-                                    </form>
+                                    <button class="btn btn-primary" style="margin-top: 18px"><a href="/login" style="color: inherit">Log Out</a></button>
+                               
                                 </li>
                             </ul>
                         </div>
@@ -82,33 +72,22 @@
 
                         <div>
 
-                            <button type="button" class="button-menu-mobile btn-mobile-view visible-xs visible-sm"><i class="mdi mdi-close"></i></button>
+                            <!-- Left Menu Start -->
+                            <ul class="metisMenu nav" id="side-menu">
 
-                                <!-- User Detail box -->
-                                <div class="user-details">
+                                <li><a href="/home"><i></i>Home</a></li>
 
+                                <li><a href="/veteran"><i></i>Veteran</a></li>
 
-                                    <div class="pull-left">
-
-                                     </div>
-
-
-                                  
-                                </div>
-                                <!--- End User Detail box -->
-
-                                <!-- Left Menu Start -->
-                                <ul class="metisMenu nav" id="side-menu">
-
-                                    <li><a href="/home"><i></i>Home</a></li>
-
-                                    <li><a href="/veteran"><i></i>Veteran</a></li>
-
-                                    <li><a href="/employer"><i></i>Employer</a></li>
+                                <li><a href="/employer"><i></i>Employer</a></li>
     
-                                    <li><a href="/jobsTable"><i></i>Jobs</a></li>
+                                <li><a href="/jobsTable"><i></i>Jobs</a></li>
 
-                                </ul>
+                                <li><a href="/search"><i></i>Search</a></li>
+
+                                <li><a href="/team"><i></i>Team</a></li>
+
+                            </ul>
                                 <!-- End Left Menu -->
                         </div>
                     </div>
@@ -148,13 +127,17 @@
     <!-- Team Js -->
     <script src="/assets/js/team.js"></script>
 
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
     <script type="text/javascript">
+
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
+
       function drawChart() {
 
         var data = google.visualization.arrayToDataTable([
+
           ['Service Branch', 'Number of Veterans'],
           ['Marines',     1],
           ['Army',      1],
@@ -171,6 +154,7 @@
 
         chart.draw(data, options);
       }
+
     </script>
 
     </body>
