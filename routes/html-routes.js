@@ -251,7 +251,7 @@ module.exports = function(app) {
 
 			var hbsObject = dbEmployer.dataValues;
 
-			hbsObject.layout = "employer";
+			hbsObject.layout = "employerUser";
 
 			res.render("empSettings", hbsObject);
 		})
