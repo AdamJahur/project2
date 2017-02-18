@@ -80,11 +80,10 @@ module.exports = function(app) {
 
 	app.get("/employer/:id", function(req, res) {
 		
-		var data = [];
+		var jobArray = [];
+		var empArray = [];
 
 		var cid = req.params.id
-
-		console.log("Company ID: ", cid);
 
 		db.Employer.findOne({
 
@@ -94,31 +93,31 @@ module.exports = function(app) {
 
 		}).then(function(dbEmployer){
 
-			var values = dbEmployer.dataValues;
+			var dataEmp = dbEmployer.dataValues;
 
-			console.log(values);
+			empArray.push(dataEmp);
 
-			var jobPost = values
-
-			console.log(cid);
-
-			db.Job.findOne({
+			db.Job.findAll({
 
 				where: {
 					companyId: cid
 				}
 			}).then(function(dbJob) {
 
-				var jobdata = dbJob.dataValues;
+				for (i = 0; i < dbJob.length; i ++) {
 
-				jobPost.job_title = jobdata.job_title;
-				jobPost.field = jobdata.field;
-				jobPost.job_description = jobdata.job_description;
+					var input = dbJob[i].dataValues;
 
-				data.push(jobdata);
+					jobArray.push(input);
+				}
+
+				var dataJob = jobArray
+
+				console.log(dataJob);
 
 				var hbsObject = {
-					jobs: data
+					jobs: dataJob,
+					employers: [dataEmp]
 				}
 
 				console.log(hbsObject);

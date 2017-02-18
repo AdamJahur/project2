@@ -4,9 +4,15 @@ var db = require("../models");
 
 module.exports = function(app) {
 
-	app.post("/api/addjob", function(req, res) {
-			console.log(req.body);
-		db.Job.create(req.body).then(function(dbjobs) {
+	app.post("/api/addjob/:companyId", function(req, res) {
+			
+		var data = req.body;
+
+		data.companyId = req.params.companyId;
+
+		console.log(data)
+
+		db.Job.create(data).then(function(dbjobs) {
 			res.redirect("/home");
 		});
 	});
