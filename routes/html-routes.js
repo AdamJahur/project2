@@ -80,33 +80,53 @@ module.exports = function(app) {
 
 	app.get("/employer/:id", function(req, res) {
 		
+		var data = [];
+
+		var cid = req.params.id
+
+		console.log("Company ID: ", cid);
+
 		db.Employer.findOne({
 
 			where: {
-				id: req.params.id,				
+				companyId: cid,				
 			},
-				// include: [db.Job]
 
 		}).then(function(dbEmployer){
 
 			var values = dbEmployer.dataValues;
 
-			var hbsObject = {
-				company_name: values.company_name,
-				first_name: values.first_name,
-				last_name: values.last_name,
-				website: values.website,
-				phone_number: values.phone_number,
-				email: values.email,
-				address: values.address,
-				city: values.city,
-				state: values.state,
-				zip: values.zip,
-				logo: values.logo
-			}
+			console.log(values);
+
+			var jobPost = values
+
+			console.log(cid);
+
+			db.Job.findOne({
+
+				where: {
+					companyId: cid
+				}
+			}).then(function(dbJob) {
+
+				var jobdata = dbJob.dataValues;
+
+				jobPost.job_title = jobdata.job_title;
+				jobPost.field = jobdata.field;
+				jobPost.job_description = jobdata.job_description;
+
+				data.push(jobdata);
+
+				var hbsObject = {
+					jobs: data
+				}
+
+				console.log(hbsObject);
+
+				res.render("employer", hbsObject);
+			})
 
 			// console.log(hbsObject);
-			res.render("employer", hbsObject);
 		})
 	});
 

@@ -22,7 +22,7 @@ module.exports = function(sequelize, DataTypes) {
 		company_name: {
 			type: DataTypes.STRING,
 		},
-		employer_id: {
+		companyId: {
 			type: DataTypes.STRING
 		}
 	}, {
