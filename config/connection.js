@@ -8,7 +8,7 @@ else {
 	env = "development";
 }
 
-var config =require('./confg')[env]
+var config =require('./config')[env]
 
 var sequelize;
 if(config.use_env_variable) {
