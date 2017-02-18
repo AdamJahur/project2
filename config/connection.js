@@ -2,13 +2,13 @@ var Sequelize = require("sequelize");
 var connection;
 
 var env;
-if (process.env.JAWSDB_URL)
+if (process.env.JAWSDB_URL) {
 	env = "production";
-else {
+} else {
 	env = "development";
 }
 
-var config = require('./config')[env]
+var config = require('./config')[env];
 
 var sequelize;
 if(config.use_env_variable) {
