@@ -2,23 +2,19 @@
 {
   "development": {
     "username": "root",
-    "password": "@ndroid4LIFE",
+    "password": "35cYqeqPam5g",
     "database": "military_connect",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "@ndroid4LIFE",
+    "password": "35cYqeqPam5g",
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "@ndroid4LIFE",
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "use_env_variable": "JAWSDB_URL"
   }
 }
