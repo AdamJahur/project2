@@ -2,23 +2,24 @@
 {
   "development": {
     "username": "root",
-    "password": "@ndroid4LIFE",
+    "password": "35cYqeqPam5g",
     "database": "military_connect",
-    "host": "127.0.0.1",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "@ndroid4LIFE",
+    "password": "35cYqeqPam5g",
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "@ndroid4LIFE",
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "cq3dsb81sjsk3tet",
+    "password": "gfgrzli63trrkwiq",
+    "database": "am19vqnlh9ihep4m",
+    "host": "l7cup2om0gngra77.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql",
+    "use_env_variable": "mysql://cq3dsb81sjsk3tet:gfgrzli63trrkwiq@l7cup2om0gngra77.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/am19vqnlh9ihep4m"
   }
 }

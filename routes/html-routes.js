@@ -85,7 +85,7 @@ module.exports = function(app) {
 			where: {
 				id: req.params.id,				
 			},
-				include: [db.Job]
+				// include: [db.Job]
 
 		}).then(function(dbEmployer){
 
@@ -236,5 +236,12 @@ module.exports = function(app) {
 
 			res.render("empSettings", hbsObject);
 		})
+	})
+
+	app.get("/search", function(req, res) {
+
+		console.log(req.body);
+
+		res.render("search");
 	})
 };
