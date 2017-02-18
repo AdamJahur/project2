@@ -34,6 +34,7 @@ CREATE TABLE employers
 CREATE TABLE veterans
 (
 	id int NOT NULL AUTO_INCREMENT,
+	photo varchar(255) NULL,
 	rank varchar(100) NULL,
 	first_name varchar(50) NULL,
 	last_name varchar(50) NULL,

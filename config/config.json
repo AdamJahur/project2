@@ -4,7 +4,7 @@
     "username": "root",
     "password": "35cYqeqPam5g",
     "database": "military_connect",
-    "host": "127.0.0.1",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
@@ -15,10 +15,6 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "35cYqeqPam5g",
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "use_env_variable": "JAWSDB_URL"
   }
 }

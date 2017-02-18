@@ -47,16 +47,19 @@
                                         <tr>
                                             <th>Company Name</th>
                                             <th>Job title</th>
-                                            <th>Contact Person</th>
+                                            <th>Field</th>
                                         </tr>
                                         </thead>
 
 
                                         <tbody>                                        
                                             {{#each jobs}}
-                                                <td><a href="/employer/{{this.id}}">{{this.company_name}}</a>
+                                            <tr>
+                                                <th scope="row"><a href="/employer/{{this.id}}">{{this.company_name}}</a></th>
                                                 <td>{{this.job_title}}</td>
-                                                <td>{{this.first_name}} {{this.last_name}}</td>
+                                                <td>
+                                                {{this.field}}</td>
+                                                </tr>
                                             {{/each}}
 
                                         </tbody>
