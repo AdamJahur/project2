@@ -202,7 +202,7 @@ module.exports = function(app) {
 			var values = dbVeteran.dataValues;
 			var hbsObject = values;
 
-			hbsObject.layout = "veteran";
+			hbsObject.layout = "veteranUser";
 
 			res.render("veteran", hbsObject);
 		})
@@ -218,7 +218,7 @@ module.exports = function(app) {
 
 			var hbsObject = dbVeteran.dataValues;
 
-			hbsObject.layout = "veteran";
+			hbsObject.layout = "veteranUser";
 
 			res.render("vetSettings", hbsObject);
 		});
@@ -235,7 +235,7 @@ module.exports = function(app) {
 			var values = dbEmployer.dataValues;
 			var hbsObject = values;
 
-			hbsObject.layout = "employer";
+			hbsObject.layout = "employerUser";
 
 			res.render("employer", hbsObject);
 		});
