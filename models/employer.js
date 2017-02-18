@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
 			type: DataTypes.STRING,
 		},
 		phone_number: {
-			type: DataTypes.STRING,
+			type: DataTypes.STRING
 		},
 		email: {
 			type: DataTypes.STRING,
@@ -48,8 +48,7 @@ module.exports = function(sequelize, DataTypes) {
     	},
     	logo: {
     		type: DataTypes.STRING
-    	},
-    	
+    	}
 	}, {
 
 		timestamps: false
