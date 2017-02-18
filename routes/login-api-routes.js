@@ -23,50 +23,41 @@ module.exports = function(app) {
 				}
 			}).then(function(dbAdmin) {
 
-				var category = dbAdmin.dataValues.category;
-				var user = dbAdmin.dataValues.username;
-				console.log("Username: ", user);
-				console.log("Category: ", category);
+				if (dbAdmin === null) {
 
-				switch(category) {
-					
-					case "admin":
-
-						res.redirect("/home");
-						break;
-
-					case "veteran":
-
-						res.redirect("/user/veteran/" + user);
-						break;
-
-					case "employer":
-
-						res.redirect("/user/employer/" + user);
-						break;
+					res.redirect("/error");
+					return;
 				};
 
-			
+				var category = dbAdmin.dataValues.category;
+				var user = dbAdmin.dataValues.username;
+				var password = dbAdmin.dataValues.password;
 
-
-
-				// if (dbAdmin === null) {
-
-				// 	res.redirect("/error");
-				// 	return;
-				// }
-
-				// var password = dbAdmin.dataValues.password;
-
-				// if (pass === password) {
-
-				// 	res.redirect("/home/" + user);
-
-				// } else {
-
-				// 	res.redirect("/error");
-				// }
+				if (pass === password) {
 				
-			});
+
+					switch(category) {
+						
+						case "admin":
+	
+							res.redirect("/home");
+							break;
+	
+						case "veteran":
+	
+							res.redirect("/user/veteran/" + user);
+							break;
+	
+						case "employer":
+	
+							res.redirect("/user/employer/" + user);
+							break;
+					};
+
+				} else {
+
+					res.redirect("/error");
+				}
+		});
 	});
 }

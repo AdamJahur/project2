@@ -7,6 +7,9 @@ module.exports = function(sequelize, DataTypes) {
       autoIncrement: true,
       primaryKey: true
       },
+    photo: {
+      type: DataTypes.STRING,
+    },
     rank: {
         type: DataTypes.STRING,
       },
@@ -47,7 +50,7 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING,
       },
     field: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
       },
     bio: {
       type: DataTypes.STRING

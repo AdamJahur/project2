@@ -2,7 +2,7 @@ module.exports = function(sequelize, DataTypes) {
 
 	var Employer = sequelize.define("Employer", {
 
-		id: {
+		companyId: {
 			type: DataTypes.INTEGER,
 			autoIncrement: true,
 			primaryKey: true
@@ -17,7 +17,7 @@ module.exports = function(sequelize, DataTypes) {
 			type: DataTypes.STRING,
 		},
 		website: {
-			type: DataTypes.STRING
+			type: DataTypes.STRING,
 		},
 		phone_number: {
 			type: DataTypes.STRING

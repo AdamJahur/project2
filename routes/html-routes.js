@@ -48,9 +48,9 @@ module.exports = function(app) {
 
 			var hbsObject = {
 				id: dbAdmin.dataValues.id,
-				name: dbAdmin.dataValues.name,
-				email: dbAdmin.dataValues.email,
-				bio: dbAdmin.dataValues.bio,
+				first_name: dbAdmin.dataValues.first_name,
+				last_name: dbAdmin.dataValues.last_name,
+				email: dbAdmin.dataValues.email
 			};
 
 			res.render("profile", hbsObject)
@@ -80,32 +80,52 @@ module.exports = function(app) {
 
 	app.get("/employer/:id", function(req, res) {
 		
+		var jobArray = [];
+		var empArray = [];
+
+		var cid = req.params.id
+
 		db.Employer.findOne({
 
 			where: {
-				id: req.params.id
-			}
+				companyId: cid,				
+			},
 
 		}).then(function(dbEmployer){
 
-			var values = dbEmployer.dataValues;
+			var dataEmp = dbEmployer.dataValues;
 
-			var hbsObject = {
-				companyName: values.company_name,
-				firstName: values.first_name,
-				lastName: values.last_name,
-				website: values.website,
-				phoneNumber: values.phone_number,
-				email: values.email,
-				address1: values.address,
-				city: values.city,
-				state: values.state,
-				zip: values.zip,
-				logo: values.logo
-			}
+			empArray.push(dataEmp);
+
+			db.Job.findAll({
+
+				where: {
+					companyId: cid
+				}
+			}).then(function(dbJob) {
+
+				for (i = 0; i < dbJob.length; i ++) {
+
+					var input = dbJob[i].dataValues;
+
+					jobArray.push(input);
+				}
+
+				var dataJob = jobArray
+
+				console.log(dataJob);
+
+				var hbsObject = {
+					jobs: dataJob,
+					employers: [dataEmp]
+				}
+
+				console.log(hbsObject);
+
+				res.render("employer", hbsObject);
+			})
 
 			// console.log(hbsObject);
-			res.render("employer", hbsObject);
 		})
 	});
 
@@ -151,18 +171,18 @@ module.exports = function(app) {
 
 	app.get("/jobsTable", function(req, res) {
 
-		db.Employer.findAll({}).then(function(dbEmployer){
+		db.Job.findAll({}).then(function(dbJob){
 			
 			var data = [];
 
-			for (var i = 0; i < dbEmployer.length; i++) {
+			for (var i = 0; i < dbJob.length; i++) {
 
-				var input = dbEmployer[i].dataValues;
+				var input = dbJob[i].dataValues;
 
 				data.push(input);
 			}
 			var hbsObject = {
-				employer: data
+				jobs: data
 			}
 
 			res.render("jobs", hbsObject);
@@ -235,5 +255,12 @@ module.exports = function(app) {
 
 			res.render("empSettings", hbsObject);
 		})
+	})
+
+	app.get("/search", function(req, res) {
+
+		console.log(req.body);
+
+		res.render("search");
 	})
 };

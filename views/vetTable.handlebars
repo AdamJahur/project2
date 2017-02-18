@@ -44,7 +44,7 @@
                                         <thead>
                                         <tr>
                                             <th>Name</th>
-                                            <th>email</th>
+                                            <th>Email</th>
                                             <th>Phone Number</th>
                                         </tr>
                                         </thead>
@@ -54,7 +54,7 @@
 
                                           {{#each veterans}}
                                                 <tr>
-                                                    <td><a href="/veteran/{{this.id}}">{{this.first_name}}</a>
+                                                    <th scope="row"><a href="/veteran/{{this.id}}">{{this.first_name}} {{this.last_name}}</a></th>
                                                     <td>{{this.email}}</td>
                                                     <td>{{this.phone_number}}</td>
                                                 </tr>
