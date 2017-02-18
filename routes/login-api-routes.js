@@ -35,6 +35,7 @@ module.exports = function(app) {
 
 				if (pass === password) {
 				
+					console.log(category);
 
 					switch(category) {
 						
