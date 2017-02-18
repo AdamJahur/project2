@@ -48,6 +48,9 @@ module.exports = function(sequelize, DataTypes) {
     	},
     	logo: {
     		type: DataTypes.STRING
+    	},
+    	category: {
+    		type: DataTypes.STRING
     	}
 	}, {
 
