@@ -28,11 +28,13 @@
 
                     <tbody>                                        
                         {{#each jobs}}
-
+                    
+                    <tr>
                         <td scope="row"><a href="/employer/{{this.id}}">{{this.company_name}}</a></td>
                         <td>{{this.job_title}}</td>
                         <td>{{this.field}}</td>
-                            
+                    </tr>
+                        
                         {{/each}}
                     </tbody>
                 </table>
