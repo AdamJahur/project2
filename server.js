@@ -38,6 +38,11 @@ require("./routes/login-api-routes.js")(app);
 require("./routes/jobs-api-route.js")(app);
 require("./routes/signup-api-routes.js")(app);
 
+app.get('/login', function(req, res) {
+
+	res.render("login", {layout: "empty"});
+});
+
 
 // Syncing our sequelize models and then starting our express app
 db.sequelize.sync({ force: true }).then(function() {
