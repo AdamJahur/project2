@@ -1,22 +1,6 @@
-# project2
+# Military Connect
 
-Example: Working
-CREATE TABLE `military_connect`.`Veternas` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `rank` VARCHAR(45) NULL,
-  `firstName` VARCHAR(45) NULL COMMENT '			',
-  `lastName` VARCHAR(45) NULL,
-  `email` VARCHAR(45) NULL,
-  `phoneNumber` VARCHAR(45) NULL,
-  `gender` VARCHAR(45) NULL,
-  `address1` VARCHAR(45) NULL,
-  `address2` VARCHAR(45) NULL,
-  `city` VARCHAR(45) NULL,
-  `zip` VARCHAR(45) NULL,
-  `userName` VARCHAR(45) NULL,
-  `passWord` VARCHAR(45) NULL,
-  `skills` VARCHAR(45) NULL,
-  PRIMARY KEY (`id`));
+Military Connect is a Project/Proof of Concept that would host military veterans and employers/companies and match them up. Employers would matched up with veterans and vice versa. Each would have the ability to connect with one another and establish a relationship. Employers would also have the ability to post jobs which would be added to their profile and to a jobs table with other company jobs that all veterans are able to view. Matches between veterans and companies will be made based off of skills provided by both parties. Some future developments would be adding a counsoling service, lawyer referal service, housing help, and veteran benefits assistance.
 
-Example: Working
-INSERT INTO `military_connect`.`Veternas` (`id`, `rank`, `firstName`, `lastName`, `email`, `phoneNumber`, `gender`, `address1`, `address2`, `city`, `zip`, `userName`, `passWord`, `skills`) VALUES ('1', 'Private', 'John', 'Marcow', 'Jmarcow@example.com', '555-555-5555', 'male', '555 Awesom Ave', 'n/a', 'Orlando', '32811', 'Jmarcow', 'password', 'Farmer');
+&copy; Adam Jahur, Devin Zimmerman, Edwin Rivera, Beatriz Lopez 
+
